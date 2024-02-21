@@ -11,6 +11,15 @@ public class CircleLayer : MonoBehaviour
     public Vector2[] DPattern;
     public Vector2[] GPattern;
 
+    public enum LineLayserPattern
+    {
+        APattern,
+        BPattern, 
+        CPattern,
+        DPattern,
+        GPattern
+    };
+
     void Start()
     {
         APattern = new Vector2[5];
