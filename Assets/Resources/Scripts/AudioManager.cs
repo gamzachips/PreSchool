@@ -1,17 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField]
-    List<List<float>> musicTimings = new List<List<float>>();
-    
-    [SerializeField]
-    List<List<AudioClip>> musicClips = new List<List<AudioClip>>();
+    [Serializable]
+    public class MusicTimings
+    {
+        public float[] elements;
+    }
+    public MusicTimings[] musicTimings;
+
+    [Serializable]
+    public class MusicClips
+    {
+        public AudioClip[] elements;
+    }
+    public MusicClips[] musicClips;
 
     [SerializeField]
-    List<AudioSource> musicSources = new List<AudioSource>();
+    List<AudioSource> musicSources;
 
     [SerializeField]
     AudioSource itemSoundSource;
@@ -21,9 +30,6 @@ public class AudioManager : MonoBehaviour
 
     TimeChecker timeChecker;
     
-    [SerializeField]
-    float timeBox = 8.0f;
-
     private void Start()
     {
         timeChecker = GameObject.Find("TimeChecker").GetComponent<TimeChecker>();
@@ -32,15 +38,15 @@ public class AudioManager : MonoBehaviour
 
     void Update()
     {
-        for(int i = 0; i < musicTimings.Count; i++)
+        for(int i = 0; i < musicTimings.Length; i++)
         {
-            for (int j = 0; j < musicTimings[i].Count; j++)
+            for (int j = 0; j < musicTimings[i].elements[j]; j++)
             {
                 //음악을 시작할 시간이면
-                if (Mathf.Abs(musicTimings[i][j] - timeChecker.NowTime) < Time.deltaTime)
+                if (Mathf.Abs(musicTimings[i].elements[j] - timeChecker.NowTime) < Time.deltaTime)
                 {
                     //음악을 올린다
-                    musicSources[i].clip = musicClips[i][j];
+                    musicSources[i].clip = musicClips[i].elements[j];
                     musicSources[i].Play();
                 }
 
