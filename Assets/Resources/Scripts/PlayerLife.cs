@@ -28,7 +28,8 @@ public class PlayerLife : MonoBehaviour
     {
         life,
         invincible,
-        die
+        die,
+        defence
     };
 
     PlayerState playerstate = PlayerState.life;
