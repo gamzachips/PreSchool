@@ -4,19 +4,36 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    //생성 주기 최소
+    [SerializeField]
+    protected float spawnMinTime = 0f;
+
+    //생성 주기 최대
+    [SerializeField]
+    protected float spawnMaxTime = 0f;
+
+    //소멸시간
     [SerializeField]
     protected float destroyTime = 15f;
 
+    //깜빡이기 시작하는 시간
     [SerializeField]
     protected float blinkStartTime = 10f;
 
+    //깜빡임 주기/2
     [SerializeField]
     protected float blinkIntervalTime = 0.5f;
 
+    //렌더러
     protected SpriteRenderer renderer;
 
+    //아이템 생성된 후 시간
     protected float nowTime = 0f;
+
+    //플레이어가 먹었는지 여부
     protected bool eaten = false;
+
+    //깜빡이는 중인지 여부
     private bool isBlinking = false;
 
     Color origin = new Color(1, 1, 1, 1);
@@ -31,9 +48,9 @@ public class Item : MonoBehaviour
     private void Update()
     {
         nowTime += Time.deltaTime;
-        
+
         //깜빡임 시간이 되면 
-        if(nowTime > blinkStartTime && !isBlinking)
+        if (nowTime > blinkStartTime && !isBlinking)
         {
             StartCoroutine(Blink());
             isBlinking = true;
@@ -48,11 +65,12 @@ public class Item : MonoBehaviour
 
     IEnumerator Blink()
     {
-        while(true)
+        while (true)
         {
+            //깜빡임 처리 - 투명<->불투명
             renderer.color = (renderer.color == origin) ? transparent : origin;
             yield return new WaitForSeconds(blinkIntervalTime);
         }
-        
+
     }
 }
