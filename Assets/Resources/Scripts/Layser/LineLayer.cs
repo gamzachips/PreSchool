@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LineLayer : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public SpriteRenderer linelayser;
+    public float Width;
+    public float Height;
+
     void Start()
     {
         
@@ -12,6 +17,11 @@ public class LineLayer : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        
+    }
+
+    public void Multiply(float Width, float Height)
     {
         
     }
