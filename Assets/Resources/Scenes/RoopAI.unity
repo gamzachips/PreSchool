@@ -152,7 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d567f1c78b6bc314c967738d71934f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeChecker: {fileID: 0}
+  timeChecker: {fileID: 1675642585}
+  indicatorTime: 1
   times: []
   persistTime: []
   lasers: []
@@ -684,6 +685,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  startPos: {x: 0, y: 0}
+  targetPos: {x: 0, y: 0}
 --- !u!212 &2116342270
 SpriteRenderer:
   m_ObjectHideFlags: 0
