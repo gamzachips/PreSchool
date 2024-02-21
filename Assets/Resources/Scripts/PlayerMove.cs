@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField]
-    float speed = 1f;
+    float speed = 100f;
+
     public float Speed {  get { return speed; } set {  speed = value; } }
+
  
     void Update()
     {
@@ -16,4 +18,5 @@ public class PlayerMove : MonoBehaviour
         Vector3 moveDir = new Vector3(h, v).normalized;
         gameObject.transform.position += moveDir * speed * Time.deltaTime;
     }
+
 }

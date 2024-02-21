@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollisionTest : MonoBehaviour
+public class BulletCollisionTest : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,13 +16,13 @@ public class CollisionTest : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision == null) return;
 
-        if(collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.name =="Player")
         {
-            //collision.gameObject.GetComponent<PlayerLife>().DecreaseLife();
+            collision.gameObject.GetComponent<PlayerLife>().OnPlayerDamage();
         }
     }
 }

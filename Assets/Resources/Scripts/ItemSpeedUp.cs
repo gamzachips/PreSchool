@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemSpeedUp : MonoBehaviour
+public class ItemSpeedUp : Item
 {
     [SerializeField]
     float upSpeed = 5f;
@@ -20,6 +20,8 @@ public class ItemSpeedUp : MonoBehaviour
         //플레이어와 충돌했으면 
         if(collision.gameObject.CompareTag("Player"))
         {
+            //먹은 상태
+            eaten = true;
             playerMove = collision.GetComponent<PlayerMove>();
             //기존 속도 기록
             originSpeed = playerMove.Speed;
@@ -39,6 +41,6 @@ public class ItemSpeedUp : MonoBehaviour
         //스피드 복구
         playerMove.Speed = originSpeed;
         //게임 오브젝트 삭제
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 }
