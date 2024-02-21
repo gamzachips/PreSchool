@@ -22,7 +22,7 @@ public class CollisionTest : MonoBehaviour
 
         if(collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerLife>().DecreaseLife();
+            //collision.gameObject.GetComponent<PlayerLife>().DecreaseLife();
         }
     }
 }
