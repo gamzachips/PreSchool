@@ -22,16 +22,15 @@ public class ScoreSystem : MonoBehaviour
 
     public void Update()
     {
-        float percentage = score / (float)maxScore;
-        if (percentage < 0.25f)
+        if (score < 4950)
         {
             grade = 'C';
         }
-        else if(percentage < 0.5f)
+        else if(score < 13200)
         {
             grade = 'B';
         }
-        else if(percentage < 0.75)
+        else if(score < 21450)
         {
             grade = 'A';
         }
