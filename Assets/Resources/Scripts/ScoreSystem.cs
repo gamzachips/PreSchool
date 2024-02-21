@@ -6,22 +6,40 @@ using UnityEngine;
 public class ScoreSystem : MonoBehaviour
 {
     [SerializeField]
-    TextMeshProUGUI scoreText;
+    TextMeshProUGUI gradeText;
 
+    [SerializeField]
+    int maxScore = 33000;
+
+    char grade;
     int score = 0;
+
     public int Score { get { return score; } }
     public void AddScore(int amount)
     {
         score += amount;
     }
 
-    private void Start()
+    public void Update()
     {
-        scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
+        if (score < 4950)
+        {
+            grade = 'C';
+        }
+        else if(score < 13200)
+        {
+            grade = 'B';
+        }
+        else if(score < 21450)
+        {
+            grade = 'A';
+        }
+        else
+        {
+            grade = 'S';
+        }
+
+        gradeText.SetText(grade.ToString());
     }
 
-    private void Update()
-    {
-        scoreText.SetText(score.ToString());
-    }
 }
