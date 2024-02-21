@@ -37,8 +37,8 @@ public class Item : MonoBehaviour
     private bool isBlinking = false;
 
     Color origin = new Color(1, 1, 1, 1);
-    Color transparent = new Color(1, 1, 1, 0);
-
+    Color transparent = new Color(1, 1, 1, 0.3f);
+    
     private void Start()
     {
         renderer = GetComponent<SpriteRenderer>();
