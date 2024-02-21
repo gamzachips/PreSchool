@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using static PlayerLife;
 
-public class DefenceItem : MonoBehaviour
+public class DefenceItem : Item
 {
     public PlayerLife playerlife;
 
@@ -28,6 +28,9 @@ public class DefenceItem : MonoBehaviour
             && (playerlife.playerstate == PlayerLife.PlayerState.life) )
         {
             playerlife.playerstate = PlayerState.defence;
+            audioManager.PlayItemSound();
+            //아이템 삭제
+            Destroy(this.gameObject);
         }
     }
 }

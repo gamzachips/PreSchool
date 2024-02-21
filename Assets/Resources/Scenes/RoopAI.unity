@@ -1544,7 +1544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34d61af6f689cfc43b5a887544d0a4e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gradeText: {fileID: 0}
+  gradeText: {fileID: 1687891568}
   maxScore: 33000
 --- !u!1 &1551657499
 GameObject:

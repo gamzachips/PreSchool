@@ -18,6 +18,8 @@ public class ItemScore: Item
 
             //아이템 삭제
             Destroy(this.gameObject);
+
+            audioManager.PlayItemSound();
         }
     }
 
