@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemSpeedUp : Item
 {
     [SerializeField]
-    float upSpeed = 5f;
+    float upSpeedMul = 1.5f;
 
     [SerializeField]
     float speedUpTimeSecond = 5f;
@@ -26,7 +26,7 @@ public class ItemSpeedUp : Item
             //기존 속도 기록
             originSpeed = playerMove.Speed;
             //스피드 업
-            playerMove.Speed = upSpeed;
+            playerMove.Speed = originSpeed * upSpeedMul;
             //아이템은 충돌 처리 해제, 렌더러 해제
             GetComponent<BoxCollider2D>().enabled = false;
             GetComponent<SpriteRenderer>().enabled = false;
