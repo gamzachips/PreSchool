@@ -1,59 +1,90 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+
+
 
 public class PlayerLife : MonoBehaviour
 {
+    public int MaxLife = 5;
+    public int CurLife = 3;
+    public SpriteRenderer PlayerIm;
+
+    //피격관련
+    public bool IsDamage = false;
+    public float DamageTime = 0;
+
     //라이프
     [SerializeField]
-    List<GameObject> lifeObjs;
+    bool[] LifeIdx;
 
-    int maxLife = 5;
-    int life = 5;
-
-    //무적 상태
-    [SerializeField]
-    float invincibleTimeSeconds = 2f;
-
-    bool isInvincible = false;
-
-    public int Life { get { return life; } }
-    public void DecreaseLife()
+    public enum PlayerState
     {
-        //라이프가 0이 되면 게임 아웃 
-        if (life <= 1)
+        life,
+        invincible,
+        die
+    };
+
+    PlayerState playerstate = PlayerState.life;
+
+    void Start()
+    {
+        LifeIdx = new bool[5];
+        PlayerIm = GetComponent<SpriteRenderer>();
+    }
+
+
+    private void Update()
+    {
+        if (playerstate == PlayerState.life)
         {
-            //TODO
-            //게임 아웃
-            return;
-
-        }
-        //무적 상태가 아니면 라이프 감소
-        if (!isInvincible)
-        {
-            life--;
-
-            //라이프 오브젝트 안 보이게
-            lifeObjs[life - 1].gameObject.SetActive(false);
-
-            //무적 상태 설정
-            isInvincible = true;
-            StartCoroutine(InvincibleRelease());
+            Damagefunc();
         }
     }
 
-    public void Start()
+    public void Damagefunc()
     {
-        life = maxLife;
+        if (IsDamage)
+        {
+            DamageTime += Time.deltaTime;
+
+            PlayerIm.enabled = false;
+        }
+
+        if (DamageTime >= 3f)
+        {
+            IsDamage = false;
+            PlayerIm.enabled = true;
+        }
+    }
+    public void IsLife()
+    {
+        // 살아있는가?
+        if(CurLife != 0)
+        {
+            for (int i = 0; i < MaxLife; i++)
+            {
+                if (LifeIdx[i] == true)
+                {
+                    playerstate = PlayerState.life;
+                }
+            }
+        }
+
+        // 진짜 죽었는가?
+        else if (LifeIdx[0] == false)
+        {
+            playerstate = PlayerState.die;
+        }
+
     }
 
-    void Update()
+    public void OnPlayerDamage(SpriteRenderer MainPlayerIm)
     {
-        
+        IsDamage = true;
+        PlayerIm = MainPlayerIm;
     }
 
-    public IEnumerator InvincibleRelease()
-    {
-        yield return new WaitForSeconds(invincibleTimeSeconds);
-    }
+
 }
