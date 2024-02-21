@@ -5,26 +5,19 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     [SerializeField]
-    float spawnTimeMin = 0f;
-    public float SpawnTimeMin {  get { return spawnTimeMin; }  }
+    protected float destroyTime = 15f;
 
     [SerializeField]
-    float spawnTimeMax = 0f;
-    public float SpawnTimeMax { get { return spawnTimeMax; } }
+    protected float blinkStartTime = 10f;
 
     [SerializeField]
-    float destroyTime = 15f;
+    protected float blinkIntervalTime = 0.5f;
 
-    [SerializeField]
-    float blinkStartTime = 10f;
+    protected SpriteRenderer renderer;
 
-    [SerializeField]
-    float blinkIntervalTime = 0.5f;
-
-    private SpriteRenderer renderer;
-
-    private float nowTime = 0f;
-    private float spawnTime = 0f;
+    protected float nowTime = 0f;
+    protected bool eaten = false;
+    private bool isBlinking = false;
 
     Color origin = new Color(1, 1, 1, 1);
     Color transparent = new Color(1, 1, 1, 0);
@@ -32,23 +25,24 @@ public class Item : MonoBehaviour
     private void Start()
     {
         renderer = GetComponent<SpriteRenderer>();
-        spawnTime = Random.Range(spawnTimeMin, spawnTimeMax);
     }
+
 
     private void Update()
     {
         nowTime += Time.deltaTime;
         
         //±Ù∫˝¿” Ω√∞£¿Ã µ«∏È 
-        if(nowTime > blinkIntervalTime)
+        if(nowTime > blinkStartTime && !isBlinking)
         {
             StartCoroutine(Blink());
+            isBlinking = true;
         }
-        //º“∏Í Ω√∞£¿Ã µ«∏È
-        else if (nowTime > spawnTime)
+        //æ» ∏‘æ˙¿ª ∂ß º“∏Í Ω√∞£¿Ã µ«∏È
+        else if (nowTime > destroyTime && !eaten)
         {
             //æ∆¿Ã≈€ º“∏Í
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 
