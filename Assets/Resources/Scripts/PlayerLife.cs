@@ -36,7 +36,6 @@ public class PlayerLife : MonoBehaviour
     void Start()
     {
         LifeIdx = new bool[5];
-        Heart = new Image[5];
         PlayerIm = GetComponent<SpriteRenderer>();
 
         for (int i = 0; i < 5; i++)
@@ -54,14 +53,6 @@ public class PlayerLife : MonoBehaviour
         }
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if(other.gameObject.name == "Bullet")
-    //    {
-    //        OnPlayerDamage();
-            
-    //    }
-    //}
 
     public void Damagefunc()
     {
@@ -105,14 +96,14 @@ public class PlayerLife : MonoBehaviour
     {
         IsDamage = true;
 
-        for (int i = 0; i >= 5; i++)
+        for (int i = 0; i < 5; i++)
         {
-            if (LifeIdx[i])
+            if (LifeIdx[i] == true)
             {
                 LifeIdx[i] = false;
-                Color color = Heart[i].GetComponent<Color>();
-                color.a = 1;
-                Heart[i].GetComponent<Image>().color = color;
+                Color tempColor = Heart[i].color;
+                tempColor.a = 0f;
+                Heart[i].color = tempColor;
                 break;
             }
         }

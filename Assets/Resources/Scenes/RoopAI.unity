@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 1493955451}
   - component: {fileID: 1493955450}
   m_Layer: 0
-  m_Name: "\uC2A4\uD06C\uB9B0\uC0F7_20240221_073430_0"
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -352,7 +352,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43c1556d1bce28c4392d71c173851f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 340
+  speed: 3
 --- !u!114 &1493955452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,7 +489,7 @@ Transform:
   m_GameObject: {fileID: 1493955449}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: -0.2, z: 0}
+  m_LocalPosition: {x: -4.51, y: -0.48, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -858,6 +858,7 @@ GameObject:
   - component: {fileID: 2116342268}
   - component: {fileID: 2116342273}
   - component: {fileID: 2116342272}
+  - component: {fileID: 2116342274}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -1009,6 +1010,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2116342274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116342267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d64a95a63d7834418c3f63f6cd63d2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
