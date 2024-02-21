@@ -20,7 +20,7 @@ public class BulletCollisionTest : MonoBehaviour
     {
         if (collision == null) return;
 
-        if(collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.name =="Player")
         {
             collision.gameObject.GetComponent<PlayerLife>().OnPlayerDamage();
         }
