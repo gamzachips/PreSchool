@@ -7,10 +7,12 @@ public class Item : MonoBehaviour
     //积己 林扁 弥家
     [SerializeField]
     protected float spawnMinTime = 0f;
+    public float SpawnMinTime { get { return spawnMinTime; } }
 
     //积己 林扁 弥措
     [SerializeField]
     protected float spawnMaxTime = 0f;
+    public float SpawnMaxTime { get { return spawnMaxTime; } }
 
     //家戈矫埃
     [SerializeField]
@@ -37,7 +39,7 @@ public class Item : MonoBehaviour
     private bool isBlinking = false;
 
     Color origin = new Color(1, 1, 1, 1);
-    Color transparent = new Color(1, 1, 1, 0);
+    Color transparent = new Color(1, 1, 1, 0.65f);
 
     private void Start()
     {
