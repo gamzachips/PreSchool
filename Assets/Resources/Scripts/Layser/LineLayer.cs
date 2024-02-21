@@ -7,22 +7,25 @@ public class LineLayer : MonoBehaviour
 {
 
     public SpriteRenderer linelayser;
-    public float Width;
-    public float Height;
+
 
     void Start()
     {
-        
+        linelayser = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        Vector2 vec = new Vector2 (0f, 0f);
+        ALineLayser(vec, 0f);
     }
 
-    public void Multiply(float Width, float Height)
+    public void ALineLayser(Vector2 Position, float StartTime)
     {
-        
+        linelayser = (SpriteRenderer)Resources.Load("/Scenes/Picture/CircleLayer", typeof(SpriteRenderer));
+
     }
+
+
+
 }
