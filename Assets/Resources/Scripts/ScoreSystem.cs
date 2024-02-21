@@ -11,7 +11,7 @@ public class ScoreSystem : MonoBehaviour
     [SerializeField]
     int maxScore = 33000;
 
-    char grade;
+    char grade = 'C';
     int score = 0;
 
     public int scoreItem500 = 0;
@@ -22,19 +22,29 @@ public class ScoreSystem : MonoBehaviour
     public void AddScore(int amount)
     {
         score += amount;
+        SetGrade();
     }
-
+    public void Start()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     public void Update()
+    {
+        if(gradeText != null)
+            gradeText.SetText(grade.ToString());
+    }
+    
+    private void SetGrade()
     {
         if (score < 4950)
         {
             grade = 'C';
         }
-        else if(score < 13200)
+        else if (score < 13200)
         {
             grade = 'B';
         }
-        else if(score < 21450)
+        else if (score < 21450)
         {
             grade = 'A';
         }
@@ -43,7 +53,13 @@ public class ScoreSystem : MonoBehaviour
             grade = 'S';
         }
 
-        gradeText.SetText(grade.ToString());
+        PlayerLife playerLife = GameObject.Find("Player").GetComponent<PlayerLife>();
+        if(playerLife!= null)
+        {
+            if(playerLife.playerstate == PlayerLife.PlayerState.die)
+            {
+                grade = 'F';
+            }
+        }
     }
-
 }

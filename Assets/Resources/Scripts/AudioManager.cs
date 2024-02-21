@@ -33,7 +33,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         timeChecker = GameObject.Find("TimeChecker").GetComponent<TimeChecker>();
-        itemSoundSource.clip = itemSoundClip;
+        //itemSoundSource.clip = itemSoundClip;
     }
 
     void Update()
