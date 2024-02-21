@@ -6,7 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     [SerializeField]
     float speed = 1f;
-
+    public float Speed {  get { return speed; } set {  speed = value; } }
  
     void Update()
     {
