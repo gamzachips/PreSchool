@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletCollisionTest : MonoBehaviour
+public class CollisionTest : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
