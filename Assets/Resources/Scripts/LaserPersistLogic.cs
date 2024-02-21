@@ -5,6 +5,9 @@ using UnityEngine;
 public class LaserPersistLogic : MonoBehaviour
 {
     [SerializeField]
+    float moveSpeed = 1f;
+
+    [SerializeField]
     TimeChecker timeChecker;
 
     //레이저가 나타나는 시간
@@ -35,7 +38,7 @@ public class LaserPersistLogic : MonoBehaviour
     private void Update()
     {
         //이번 레이저가 나올 시간이면 
-        if(timeChecker.NowTime == times[nowIdx])
+        if(Mathf.Abs(timeChecker.NowTime -times[nowIdx]) < Time.deltaTime )
         {
             //레이저 켜기
             lasers[nowIdx].SetActive(true);
