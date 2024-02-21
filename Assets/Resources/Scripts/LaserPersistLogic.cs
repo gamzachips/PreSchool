@@ -37,6 +37,8 @@ public class LaserPersistLogic : MonoBehaviour
 
     private void Update()
     {
+        if (nowIdx >= lasers.Count)
+            return;
         //레이저가 나오기 이전 시간에
         if(Mathf.Abs(timeChecker.NowTime - times[nowIdx]) - indicatorTime < Time.deltaTime)
         {
