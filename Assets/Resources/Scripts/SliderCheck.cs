@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,5 +26,7 @@ public class SliderCheck : MonoBehaviour
             transform.Find("Fill Area").gameObject.SetActive(true);
 
         slider.value = scoreSystem.Score;
+
+
     }
 }
