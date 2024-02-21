@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemSpeedUp : MonoBehaviour
+public class ItemSpeedUp : Item
 {
     [SerializeField]
     float upSpeed = 5f;
