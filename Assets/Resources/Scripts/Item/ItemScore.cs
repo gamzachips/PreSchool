@@ -7,6 +7,12 @@ public class ItemScore: Item
     [SerializeField]
     int score = 100;
 
+    ScoreSystem scoreSystem;
+
+    private void Start()
+    {
+        scoreSystem = GameObject.Find("ScoreSystem").GetComponent<ScoreSystem>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision == null) return;
@@ -14,7 +20,6 @@ public class ItemScore: Item
         if(collision.gameObject.CompareTag("Player"))
         {
             //점수 증가
-            ScoreSystem scoreSystem = collision.gameObject.GetComponent<ScoreSystem>();
             scoreSystem.AddScore(score);
 
             if(score == 500)
