@@ -23,11 +23,11 @@ public class Bullet2 : MonoBehaviour {
                 tempTime = time;
                 time = 4.0f;
                 changedTime = true;
+                bulletTouchCount = 0;
             }
-            else if (bulletTouchCount == 3 && changedTime) { // bulletTouchCount가 3이 되면 time 값을 원래대로 돌립니다.
+            else if (bulletTouchCount != 2 && changedTime) { // bulletTouchCount가 3이 되면 time 값을 원래대로 돌립니다.
                 time = tempTime;
                 changedTime = false;
-                bulletTouchCount = 0;
             }
         }
     }
