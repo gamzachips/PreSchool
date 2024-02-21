@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 
@@ -18,6 +19,10 @@ public class PlayerLife : MonoBehaviour
     //∂Û¿Ã«¡
     [SerializeField]
     bool[] LifeIdx;
+    public Image[] Heart;
+    public GameObject Player;
+    public GameObject bullet;
+
 
     public enum PlayerState
     {
@@ -31,7 +36,13 @@ public class PlayerLife : MonoBehaviour
     void Start()
     {
         LifeIdx = new bool[5];
+        Heart = new Image[5];
         PlayerIm = GetComponent<SpriteRenderer>();
+
+        for (int i = 0; i < 5; i++)
+        {
+            LifeIdx[i] = true;
+        }
     }
 
 
@@ -39,9 +50,18 @@ public class PlayerLife : MonoBehaviour
     {
         if (playerstate == PlayerState.life)
         {
-            Damagefunc();
+
         }
     }
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if(other.gameObject.name == "Bullet")
+    //    {
+    //        OnPlayerDamage();
+            
+    //    }
+    //}
 
     public void Damagefunc()
     {
@@ -68,6 +88,7 @@ public class PlayerLife : MonoBehaviour
                 if (LifeIdx[i] == true)
                 {
                     playerstate = PlayerState.life;
+                    break;
                 }
             }
         }
@@ -80,10 +101,21 @@ public class PlayerLife : MonoBehaviour
 
     }
 
-    public void OnPlayerDamage(SpriteRenderer MainPlayerIm)
+    public void OnPlayerDamage()
     {
         IsDamage = true;
-        PlayerIm = MainPlayerIm;
+
+        for (int i = 1; i >= 0; i--)
+        {
+            if (LifeIdx[i])
+            {
+                LifeIdx[i] = false;
+                Color color = Heart[i].GetComponent<Color>();
+                color.a = 1;
+                Heart[i].GetComponent<Image>().color = color;
+                break;
+            }
+        }
     }
 
 
