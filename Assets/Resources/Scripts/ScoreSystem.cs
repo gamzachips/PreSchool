@@ -14,6 +14,10 @@ public class ScoreSystem : MonoBehaviour
     char grade;
     int score = 0;
 
+    public int scoreItem500 = 0;
+    public int scoreItem1000 = 0;
+    public int scoreItem1500 = 0;
+
     public int Score { get { return score; } }
     public void AddScore(int amount)
     {

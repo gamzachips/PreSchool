@@ -14,7 +14,21 @@ public class ItemScore: Item
         if(collision.gameObject.CompareTag("Player"))
         {
             //점수 증가
-            collision.gameObject.GetComponent<ScoreSystem>().AddScore(score);
+            ScoreSystem scoreSystem = collision.gameObject.GetComponent<ScoreSystem>();
+            scoreSystem.AddScore(score);
+
+            if(score == 500)
+            {
+                scoreSystem.scoreItem500++;
+            }
+            else if (score == 1000)
+            {
+                scoreSystem.scoreItem1000++;
+            }
+            else if (score == 1500)
+            {
+                scoreSystem.scoreItem1500++;
+            }
 
             //아이템 삭제
             Destroy(this.gameObject);
