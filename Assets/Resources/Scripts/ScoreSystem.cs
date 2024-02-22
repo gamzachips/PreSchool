@@ -53,10 +53,15 @@ public class ScoreSystem : MonoBehaviour
             grade = GradeType.S;
         }
 
+    }
+
+    private void Update()
+    {
+
         PlayerLife playerLife = GameObject.Find("Player").GetComponent<PlayerLife>();
-        if(playerLife!= null)
+        if (playerLife != null)
         {
-            if(playerLife.playerstate == PlayerLife.PlayerState.die)
+            if (playerLife.playerstate == PlayerLife.PlayerState.die)
             {
                 grade = GradeType.F;
             }

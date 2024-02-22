@@ -24,8 +24,8 @@ public class DefenceItem : Item
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision == null) return;
-
-        if (collision.gameObject.name == "Player"
+        playerlife = collision.gameObject.GetComponent<PlayerLife>();
+        if (collision.gameObject.CompareTag("Player")
             && (playerlife.playerstate == PlayerLife.PlayerState.life) )
         {
             playerlife.playerstate = PlayerState.defence;
