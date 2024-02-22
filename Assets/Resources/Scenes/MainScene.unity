@@ -320,6 +320,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 340
+  front: {fileID: 0}
+  back: {fileID: 0}
+  left: {fileID: 0}
 --- !u!114 &593844032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,7 +338,6 @@ MonoBehaviour:
   MaxLife: 5
   CurLife: 3
   PlayerIm: {fileID: 0}
-  IsDamage: 0
   DamageTime: 0
   LifeIdx: 0101010101
   Heart:
@@ -346,6 +348,7 @@ MonoBehaviour:
   - {fileID: 1535267328}
   Player: {fileID: 593844026}
   bullet: {fileID: 675966161}
+  PlayerOriginalColor: {r: 0, g: 0, b: 0, a: 0}
   playerstate: 0
 --- !u!61 &593844033
 BoxCollider2D:

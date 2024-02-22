@@ -23,6 +23,17 @@ public class ButtonManager : MonoBehaviour
             GameObject.Find("ImageChange").GetComponent<Image>().sprite = sprites[clickCount];
         }
     }
+
+    public void ButtonClick2() {
+        clickCount++;
+        if (clickCount > maxCount) {
+            clickCount = 0;
+            SceneManager.LoadScene("MenuScene");
+        }
+        else {
+            GameObject.Find("ImageChange").GetComponent<Image>().sprite = sprites[clickCount];
+        }
+    }
     void Start()
     {
         GameObject.Find("ImageChange").GetComponent<Image>().sprite = sprites[0];

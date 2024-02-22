@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class PlayerLife : MonoBehaviour
 {
-    public int MaxLife = 5;
+    public int MaxLife = 1;
     public int CurLife = 3;
     public SpriteRenderer PlayerIm;
 
