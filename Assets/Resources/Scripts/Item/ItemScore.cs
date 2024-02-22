@@ -12,6 +12,8 @@ public class ItemScore: Item
     private void Start()
     {
         scoreSystem = GameObject.Find("ScoreSystem").GetComponent<ScoreSystem>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

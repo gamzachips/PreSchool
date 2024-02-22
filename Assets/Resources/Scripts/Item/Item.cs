@@ -27,7 +27,7 @@ public class Item : MonoBehaviour
     protected float blinkIntervalTime = 0.5f;
 
     //렌더러
-    protected SpriteRenderer renderer;
+    protected SpriteRenderer spriteRenderer;
 
     //아이템 생성된 후 시간
     protected float nowTime = 0f;
@@ -46,7 +46,7 @@ public class Item : MonoBehaviour
     
     private void Start()
     {
-        renderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>(); 
     }
 
@@ -74,7 +74,7 @@ public class Item : MonoBehaviour
         while (true)
         {
             //깜빡임 처리 - 투명<->불투명
-            renderer.color = (renderer.color == origin) ? transparent : origin;
+            spriteRenderer.color = (spriteRenderer.color == origin) ? transparent : origin;
             yield return new WaitForSeconds(blinkIntervalTime);
         }
 
