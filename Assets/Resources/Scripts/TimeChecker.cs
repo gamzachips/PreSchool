@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TimeChecker : MonoBehaviour
 {
+    [SerializeField]
+    float totalTime = 96f;
+
     float nowTime = 0f;
     public float NowTime { get { return nowTime; } }
     void Start()
@@ -14,5 +18,10 @@ public class TimeChecker : MonoBehaviour
     void Update()
     {
         nowTime += Time.deltaTime;
+
+        if(nowTime >= totalTime)
+        {
+            SceneManager.LoadScene("ResultScene");
+        }
     }
 }
