@@ -26,7 +26,7 @@ public class LineLayer : MonoBehaviour
 
     public void ALineLayser(Vector2 Position, float StartTime)
     {
-        sRender.sprite = newSprite;
+        //sRender.sprite = newSprite;
     }
 
 

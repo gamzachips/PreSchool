@@ -39,7 +39,7 @@ public class HPItem : Item
                     Color tempColor = playerlife.Heart[i].color;
                     tempColor.a = 1f;
                     playerlife.Heart[i].color = tempColor;
-                    audioManager.PlayItemSound();
+                    //audioManager.PlayItemSound();
                     break;
                 }
             }

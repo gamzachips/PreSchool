@@ -28,7 +28,7 @@ public class DefenceItem : Item
             && (playerlife.playerstate == PlayerLife.PlayerState.life) )
         {
             playerlife.playerstate = PlayerState.defence;
-            audioManager.PlayItemSound();
+            //audioManager.PlayItemSound();
             //아이템 삭제
             Destroy(this.gameObject);
         }

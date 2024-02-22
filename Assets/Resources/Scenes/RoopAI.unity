@@ -489,7 +489,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -40, y: 26}
+  m_AnchoredPosition: {x: -372.67603, y: 315}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661758639
@@ -743,7 +743,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 259.67603, y: 26}
+  m_AnchoredPosition: {x: -73, y: 315}
   m_SizeDelta: {x: 100.1, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &907551293
@@ -887,7 +887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0623ef2bf93a1be41945c4966e0f44ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreSystem: {fileID: 0}
+  scoreSystem: {fileID: 2038970095}
 --- !u!1 &1065005312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,7 +1107,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 59.900024, y: 26}
+  m_AnchoredPosition: {x: -272.776, y: 315}
   m_SizeDelta: {x: 100.1, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1255204185
@@ -1182,7 +1182,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -139.89001, y: 26}
+  m_AnchoredPosition: {x: -472.56604, y: 315}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1351566724
@@ -1332,7 +1332,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 159.79001, y: 26}
+  m_AnchoredPosition: {x: -172.88602, y: 315}
   m_SizeDelta: {x: 100.1, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1478518825
@@ -1465,6 +1465,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796f79fd13436624d875a2aeb1b95268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxLife: 5
+  CurLife: 3
+  PlayerIm: {fileID: 0}
+  DamageTime: 0
+  LifeIdx: 0101010101
+  Heart:
+  - {fileID: 1351566724}
+  - {fileID: 661758639}
+  - {fileID: 1255204185}
+  - {fileID: 1478518825}
+  - {fileID: 907551293}
+  Player: {fileID: 0}
+  bullet: {fileID: 0}
+  PlayerOriginalColor: {r: 0, g: 0, b: 0, a: 0}
+  playerstate: 0
 --- !u!95 &1493955453
 Animator:
   serializedVersion: 5
@@ -2083,6 +2098,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1994131494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1994131496}
+  - component: {fileID: 1994131495}
+  m_Layer: 0
+  m_Name: ItemSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1994131495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994131494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 618a7cdf2d9c7244a8006295732a8a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabs: []
+  minX: -8
+  maxX: 8
+  minY: -3
+  maxY: 0
+--- !u!4 &1994131496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994131494}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 957.76776, y: 548.79193, z: -6.7385674}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2014545741
 GameObject:
   m_ObjectHideFlags: 0
@@ -2418,3 +2482,4 @@ SceneRoots:
   - {fileID: 1133996904}
   - {fileID: 287929578}
   - {fileID: 2038970096}
+  - {fileID: 1994131496}
