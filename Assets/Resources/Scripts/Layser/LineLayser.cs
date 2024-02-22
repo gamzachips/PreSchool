@@ -20,8 +20,9 @@ public class LineLayser : MonoBehaviour
         //SelectLineLayserSprite(new Vector2(0, 0), 0, 0);
     }
 
-    public void SelectLineLayserSprite(Vector2 Position, float StartTime, int IndexNum)
+    public void SelectLineLayserSprite(Vector2 Position, float StartTime, int IndexNum, Vector2 Rotation)
     {
         sRender.sprite = newSprite[IndexNum];
+        layserObj.transform.position = Position;
     }
 }
