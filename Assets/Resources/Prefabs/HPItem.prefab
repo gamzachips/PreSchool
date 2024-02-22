@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7f6cb462ac501c4cb869479cb095b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnMinTime: 0
-  spawnMaxTime: 0
+  spawnMinTime: 20
+  spawnMaxTime: 40
   destroyTime: 15
   blinkStartTime: 10
   blinkIntervalTime: 0.5
