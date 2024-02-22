@@ -46,7 +46,6 @@ public class Item : MonoBehaviour
     
     private void Start()
     {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>(); 
     }
 

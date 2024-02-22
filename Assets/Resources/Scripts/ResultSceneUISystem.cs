@@ -16,7 +16,7 @@ public class ResultSceneUISystem : MonoBehaviour
     TextMeshProUGUI score1500;
 
     [SerializeField]
-    TextMeshProUGUI rankText;
+    Image rankImage;
 
     [SerializeField]
     Button endingButton;
@@ -26,11 +26,14 @@ public class ResultSceneUISystem : MonoBehaviour
 
     ScoreSystem scoreSystem;
 
+    [SerializeField]
+    Sprite[] gradeSprites;
+
     void Start()
     {
         //게임아웃이면 엔딩버튼 비활성화
         scoreSystem = GameObject.Find("ScoreSystem").GetComponent<ScoreSystem>();
-        if(scoreSystem.Grade == 'F')
+        if(scoreSystem.Grade == GradeType.F)
         {
             endingButton.gameObject.SetActive(false);
             rankOrGameover.SetText("Game Over...");
@@ -46,8 +49,8 @@ public class ResultSceneUISystem : MonoBehaviour
         score1000.SetText(scoreSystem.scoreItem1000.ToString());
         score1500.SetText(scoreSystem.scoreItem1500.ToString());
 
-        rankText.SetText(scoreSystem.Grade.ToString());
-        
+        rankImage.sprite = gradeSprites[(int)scoreSystem.Grade];
+
     }
 
 }

@@ -3,16 +3,22 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+public enum GradeType
+{
+    S, A, B, C, F
+}
+
 public class ScoreSystem : MonoBehaviour
 {
+
     [SerializeField]
     TextMeshProUGUI gradeText;
 
     [SerializeField]
     int maxScore = 33000;
 
-    char grade = 'C';
-    public char Grade { get { return grade; } }
+    GradeType grade = GradeType.S;
+    public GradeType Grade { get { return grade; } }
     int score = 0;
 
     public int scoreItem500 = 0;
@@ -39,19 +45,19 @@ public class ScoreSystem : MonoBehaviour
     {
         if (score < 4950)
         {
-            grade = 'C';
+            grade = GradeType.C;
         }
         else if (score < 13200)
         {
-            grade = 'B';
+            grade = GradeType.B;
         }
         else if (score < 21450)
         {
-            grade = 'A';
+            grade = GradeType.A;
         }
         else
         {
-            grade = 'S';
+            grade = GradeType.S;
         }
 
         PlayerLife playerLife = GameObject.Find("Player").GetComponent<PlayerLife>();
@@ -59,7 +65,7 @@ public class ScoreSystem : MonoBehaviour
         {
             if(playerLife.playerstate == PlayerLife.PlayerState.die)
             {
-                grade = 'F';
+                grade = GradeType.F;
             }
         }
     }
