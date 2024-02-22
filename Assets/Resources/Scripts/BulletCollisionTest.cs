@@ -25,9 +25,7 @@ public class BulletCollisionTest : MonoBehaviour
     {
         if (collision == null) return;
 
-        if (collision.gameObject.name == "Player" &&
-             collision.gameObject.GetComponent<PlayerLife>().playerstate == PlayerLife.PlayerState.life
-            )
+        if (collision.gameObject.name == "Player")
         {
             collision.gameObject.GetComponent<PlayerLife>().OnPlayerDamage();
         }

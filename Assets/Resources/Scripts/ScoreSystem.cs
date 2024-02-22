@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum GradeType
@@ -10,6 +11,26 @@ public enum GradeType
 
 public class ScoreSystem : MonoBehaviour
 {
+    //ΩÃ±€≈Ê
+    static ScoreSystem instance;
+    public static ScoreSystem Instance { get { Init(); return instance; } }
+
+    static void Init()
+    {
+        if(instance == null)
+        {
+            GameObject go = GameObject.Find("ScoreSystem");
+            if(go == null)
+            {
+                go = new GameObject { name = "ScoreSystem" };
+                go.AddComponent<ScoreSystem>();
+            }
+            DontDestroyOnLoad(go);
+            instance = go.GetComponent<ScoreSystem>();
+        }
+    }
+
+
 
     [SerializeField]
     int maxScore = 33000;
@@ -30,7 +51,7 @@ public class ScoreSystem : MonoBehaviour
     }
     public void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+        Init();
     }
 
     
@@ -58,13 +79,23 @@ public class ScoreSystem : MonoBehaviour
     private void Update()
     {
 
-        PlayerLife playerLife = GameObject.Find("Player").GetComponent<PlayerLife>();
-        if (playerLife != null)
+        GameObject player = GameObject.Find("Player");
+        if (player != null && player.GetComponent<PlayerLife>() != null)
         {
-            if (playerLife.playerstate == PlayerLife.PlayerState.die)
+            if (player.GetComponent<PlayerLife>().playerstate == PlayerLife.PlayerState.die)
             {
                 grade = GradeType.F;
             }
         }
+
+    }
+
+    public void Reset()
+    {
+        scoreItem500 = 0;
+        scoreItem1000 = 0;
+        scoreItem1500 = 0;
+        score = 0;
+        grade = GradeType.C;
     }
 }
