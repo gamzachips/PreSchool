@@ -8,7 +8,7 @@ public class ScneManager : MonoBehaviour
 
     public void ChangeMain()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("RoopAI");
     }
 
     public void ChangeCutScene()
@@ -21,4 +21,12 @@ public class ScneManager : MonoBehaviour
         SceneManager.LoadScene("PlayLibraryScene");
     }
 
+    public void ChangeMenu()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
+    public void ChangeEnding()
+    {
+        SceneManager.LoadScene("PlayEndingScene");
+    }
 }

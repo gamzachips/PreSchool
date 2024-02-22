@@ -31,9 +31,7 @@ public class LayserManager : MonoBehaviour
         GPattern
     };
 
-    pu
-
-    void Start()
+    public void Start()
     {
         timeChecker = GameObject.Find("TimeChecker").GetComponent<TimeChecker>();
 
