@@ -606,7 +606,7 @@ RectTransform:
   m_GameObject: {fileID: 359127256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6376563, y: 0.97192866, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 446062739}
@@ -616,7 +616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -869.4, y: -29.45269}
+  m_AnchoredPosition: {x: -893, y: -12}
   m_SizeDelta: {x: 181.21, y: 438.463}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &359127258
@@ -1967,8 +1967,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.024762947, y: -0.23697913}
-  m_Size: {x: 1.9621578, y: 3.9286973}
+  m_Offset: {x: -0.06521702, y: -0.1170067}
+  m_Size: {x: 2.0221438, y: 4.1686444}
   m_Direction: 0
 --- !u!1 &1551657499
 GameObject:
