@@ -17,6 +17,8 @@ public class ButtonManager : MonoBehaviour
         {
             clickCount = 0;
             SceneManager.LoadScene("RoopAI");
+            ScoreSystem.Instance.Reset();
+            AudioManager.Instance.PlayGameMusic();
         }
         else
         {

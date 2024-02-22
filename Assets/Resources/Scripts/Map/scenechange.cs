@@ -21,7 +21,10 @@ public class scenechange : MonoBehaviour
 
         if(curtime> changetime)
         {
+            ScoreSystem.Instance.Reset();
+            AudioManager.Instance.PlayGameMusic();
             SceneManager.LoadScene("RoopAI");
+            
         }
     }
 }
