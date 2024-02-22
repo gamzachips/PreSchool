@@ -1614,10 +1614,10 @@ MonoBehaviour:
   - {fileID: 6365721812186012181, guid: 15fafe3a86db05747b89acc6edd655a0, type: 3}
   - {fileID: 8033464643279739216, guid: ccc20bf14d1665e4086260d1e3e3bec9, type: 3}
   - {fileID: 1081415001800301851, guid: c30c9cbf3109f3549944fbed9a0bee18, type: 3}
-  minX: -5
-  maxX: 5
-  minY: -5
-  maxY: 5
+  minX: -4.1
+  maxX: 4.1
+  minY: -4.1
+  maxY: 4.1
 --- !u!4 &911447145
 Transform:
   m_ObjectHideFlags: 0
@@ -3511,8 +3511,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 48e6830fd21270141a30785e47c59177, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3532,7 +3532,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3569,9 +3569,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0148745775, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.8916961
 --- !u!50 &2116342273
 Rigidbody2D:
   serializedVersion: 4
@@ -3627,10 +3627,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positions:
-  - {x: 0, y: 5, z: 0}
-  - {x: 5, y: 0, z: 0}
-  - {x: 0, y: -5, z: 0}
-  - {x: -5, y: 0, z: 0}
+  - {x: 0, y: 4.1, z: 0}
+  - {x: 4.1, y: 0, z: 0}
+  - {x: 0, y: -4.1, z: 0}
+  - {x: -4.1, y: 0, z: 0}
   time: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
