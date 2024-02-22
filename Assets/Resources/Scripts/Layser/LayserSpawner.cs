@@ -61,9 +61,7 @@ public class LayserSpawner : MonoBehaviour
     }
 
     IEnumerator DestroyLayser(GameObject layser) {
-        Debug.Log("DestroyLayser started"); // 코루틴 시작 로그
         yield return new WaitForSeconds(layser.GetComponent<Layser>().PersistTime);
-        Debug.Log("DestroyLayser ended"); // 코루틴 종료 로그
         Destroy(layser);
     }
 }

@@ -54,15 +54,13 @@ public class PlayerLife : MonoBehaviour
         IsLife();
 
 
-        if (!(playerstate == PlayerState.invincible))
+        if (!(playerstate == PlayerState.invincible) && Input.GetKeyDown(KeyCode.I))
         {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                Debug.Log("Check");
-                playerstate = PlayerState.invincible;
-
-            }
+            playerstate = PlayerState.invincible;
+            Debug.Log(playerstate);
         }
+
+        Debug.Log("Chcek : " + playerstate);
 
         if (playerstate == PlayerState.life)
         {
@@ -70,12 +68,10 @@ public class PlayerLife : MonoBehaviour
 
             // 스프라이트 애니메이션 처리
         }
-
         else if (playerstate == PlayerState.defence)
         {
             // 스프라이트 애니메이션 처리
         }
-
         else if (playerstate == PlayerState.damage)
         {
             DamageTime += Time.deltaTime;
@@ -92,19 +88,14 @@ public class PlayerLife : MonoBehaviour
                 playerstate = PlayerState.life;
             }
         }
-
         else if(playerstate == PlayerState.die)
         {
             Debug.Log("Die");
             SceneManager.LoadScene("ResultScene");
         }
-
-        else if (playerstate == PlayerState.invincible)
+        else if (playerstate == PlayerState.invincible && Input.GetKeyDown(KeyCode.L))
         {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                playerstate = PlayerState.life;
-            }
+            playerstate = PlayerState.life;
         }
     }
 
