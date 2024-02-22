@@ -1531,6 +1531,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346255508}
   m_CullTransparentMesh: 1
+--- !u!1 &1477169492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1477169494}
+  - component: {fileID: 1477169493}
+  m_Layer: 0
+  m_Name: ResultSceneUISystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1477169493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477169492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af0db6f105d7e0f47853df701d0755cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalScore: {fileID: 249231882}
+  score500: {fileID: 1107248320}
+  score1000: {fileID: 1816502497}
+  score1500: {fileID: 1346255510}
+  rankText: {fileID: 928040008}
+  endingButton: {fileID: 106018918}
+--- !u!4 &1477169494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477169492}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.0479712, y: 1.4791827, z: -0.024754802}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1570134985
 GameObject:
   m_ObjectHideFlags: 0
@@ -2378,9 +2428,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0db6f105d7e0f47853df701d0755cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Score500: {fileID: 0}
-  Score1000: {fileID: 0}
-  Score1500: {fileID: 0}
+  totalScore: {fileID: 0}
+  score500: {fileID: 0}
+  score1000: {fileID: 0}
+  score1500: {fileID: 0}
   rankText: {fileID: 0}
   endingButton: {fileID: 0}
 --- !u!1 &2073479847
@@ -2458,3 +2509,4 @@ SceneRoots:
   - {fileID: 1745250704}
   - {fileID: 1570134989}
   - {fileID: 2073479850}
+  - {fileID: 1477169494}

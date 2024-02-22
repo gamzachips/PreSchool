@@ -12,6 +12,7 @@ public class ScoreSystem : MonoBehaviour
     int maxScore = 33000;
 
     char grade = 'C';
+    public char Grade { get { return grade; } }
     int score = 0;
 
     public int scoreItem500 = 0;
