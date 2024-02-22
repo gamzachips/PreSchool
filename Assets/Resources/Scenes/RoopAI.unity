@@ -295,6 +295,38 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &151252255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 151252256}
+  m_Layer: 0
+  m_Name: Item
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &151252256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151252255}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1282.5487, y: 295.3974, z: -3.9573586}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 911447145}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &174796952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,12 +1123,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911447143}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 549.74133, y: 544.94214, z: -6.9788175}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -732.8074, y: 249.54474, z: -3.0214589}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 151252256}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1051986247
 GameObject:
@@ -1636,11 +1668,11 @@ MonoBehaviour:
   DamageTime: 0
   LifeIdx: 0101010101
   Heart:
-  - {fileID: 1351566724}
-  - {fileID: 661758639}
-  - {fileID: 1255204185}
-  - {fileID: 1478518825}
   - {fileID: 907551293}
+  - {fileID: 1478518825}
+  - {fileID: 1255204185}
+  - {fileID: 661758639}
+  - {fileID: 1351566724}
   Player: {fileID: 0}
   bullet: {fileID: 0}
   PlayerOriginalColor: {r: 0, g: 0, b: 0, a: 0}
@@ -2621,4 +2653,4 @@ SceneRoots:
   - {fileID: 21132291}
   - {fileID: 287929578}
   - {fileID: 2038970096}
-  - {fileID: 911447145}
+  - {fileID: 151252256}

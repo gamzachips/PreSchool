@@ -27,6 +27,10 @@ public class ScneManager : MonoBehaviour
     }
     public void ChangeEnding()
     {
-        SceneManager.LoadScene("PlayEndingScene");
+        SceneManager.LoadScene("EndingScene");
+    }
+    public void ChangeResult()
+    {
+        SceneManager.LoadScene("ResultScene");
     }
 }

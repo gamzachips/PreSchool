@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -50,6 +51,7 @@ public class PlayerLife : MonoBehaviour
 
     private void Update()
     {
+        IsLife();
 
         if (playerstate == PlayerState.life)
         {
@@ -74,10 +76,16 @@ public class PlayerLife : MonoBehaviour
             tempColor.b = 0.2f;
             PlayerIm.color = tempColor;
 
-            if(DamageTime > 3f)
+            if (DamageTime > 3f)
             {
                 playerstate = PlayerState.life;
             }
+        }
+
+        else if(playerstate == PlayerState.die)
+        {
+            Debug.Log("Die");
+            SceneManager.LoadScene("ResultScene");
         }
     }
 
@@ -90,21 +98,7 @@ public class PlayerLife : MonoBehaviour
     }
     public void IsLife()
     {
-        // 살아있는가?
-        if(CurLife != 0)
-        {
-            for (int i = 0; i < MaxLife; i++)
-            {
-                if (LifeIdx[i] == true)
-                {
-                    playerstate = PlayerState.life;
-                    break;
-                }
-            }
-        }
-
-        // 진짜 죽었는가?
-        else if (LifeIdx[0] == false)
+        if (LifeIdx[4] == false)
         {
             playerstate = PlayerState.die;
         }
