@@ -131,7 +131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_pink_5
+      name: effect_sprite_pink_1
       rect:
         serializedVersion: 2
         x: 4
@@ -152,10 +152,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_pink_6
+      name: effect_sprite_pink_2
       rect:
         serializedVersion: 2
-        x: 2
+        x: 1
         y: 799
         width: 1445
         height: 118
@@ -173,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_pink_7
+      name: effect_sprite_pink_3
       rect:
         serializedVersion: 2
         x: 2
@@ -194,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_pink_8
+      name: effect_sprite_pink_4
       rect:
         serializedVersion: 2
         x: 0
@@ -215,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_pink_9
+      name: effect_sprite_pink_5
       rect:
         serializedVersion: 2
         x: 4
@@ -236,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_pink_10
+      name: effect_sprite_pink_6
       rect:
         serializedVersion: 2
         x: 47
@@ -257,7 +257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_pink_11
+      name: effect_sprite_pink_7
       rect:
         serializedVersion: 2
         x: 824
@@ -289,19 +289,16 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       effect_sprite_pink_0: -528217590
-      effect_sprite_pink_10: 2001746568
-      effect_sprite_pink_11: -1461988837
+      effect_sprite_pink_1: 107027135
       effect_sprite_pink_12: -773374517
       effect_sprite_pink_13: -1205936357
       effect_sprite_pink_14: -902059214
-      effect_sprite_pink_2: -2113740562
-      effect_sprite_pink_3: -874546487
-      effect_sprite_pink_4: -1959057205
-      effect_sprite_pink_5: 107027135
-      effect_sprite_pink_6: 1707091611
-      effect_sprite_pink_7: 2102778931
-      effect_sprite_pink_8: -1101208951
-      effect_sprite_pink_9: 439726329
+      effect_sprite_pink_2: 1707091611
+      effect_sprite_pink_3: 2102778931
+      effect_sprite_pink_4: -1101208951
+      effect_sprite_pink_5: 439726329
+      effect_sprite_pink_6: 2001746568
+      effect_sprite_pink_7: -1461988837
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
