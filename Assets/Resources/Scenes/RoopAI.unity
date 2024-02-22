@@ -489,8 +489,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -40, y: 26}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -286, y: 218}
+  m_SizeDelta: {x: 144.3911, y: 144.7281}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661758639
 MonoBehaviour:
@@ -743,8 +743,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 259.67603, y: 26}
-  m_SizeDelta: {x: 100.1, y: 100}
+  m_AnchoredPosition: {x: 146.70557, y: 218}
+  m_SizeDelta: {x: 144.5354, y: 144.7281}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &907551293
 MonoBehaviour:
@@ -887,7 +887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0623ef2bf93a1be41945c4966e0f44ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreSystem: {fileID: 0}
+  scoreSystem: {fileID: 2038970095}
 --- !u!1 &1065005312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,8 +1107,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 59.900024, y: 26}
-  m_SizeDelta: {x: 100.1, y: 100}
+  m_AnchoredPosition: {x: -141.75314, y: 218}
+  m_SizeDelta: {x: 144.5354, y: 144.7281}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1255204185
 MonoBehaviour:
@@ -1182,8 +1182,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -139.89001, y: 26}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -430.2323, y: 218}
+  m_SizeDelta: {x: 144.3911, y: 144.7281}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1351566724
 MonoBehaviour:
@@ -1332,8 +1332,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 159.79001, y: 26}
-  m_SizeDelta: {x: 100.1, y: 100}
+  m_AnchoredPosition: {x: 2.4790802, y: 217.99997}
+  m_SizeDelta: {x: 144.5354, y: 144.7281}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1478518825
 MonoBehaviour:
@@ -1465,6 +1465,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796f79fd13436624d875a2aeb1b95268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxLife: 5
+  CurLife: 3
+  PlayerIm: {fileID: 0}
+  DamageTime: 0
+  LifeIdx: 
+  Heart: []
+  Player: {fileID: 0}
+  bullet: {fileID: 0}
+  PlayerOriginalColor: {r: 0, g: 0, b: 0, a: 0}
+  playerstate: 0
 --- !u!95 &1493955453
 Animator:
   serializedVersion: 5

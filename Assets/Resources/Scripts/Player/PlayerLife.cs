@@ -54,11 +54,13 @@ public class PlayerLife : MonoBehaviour
         if (playerstate == PlayerState.life)
         {
             DamageEndfunc();
+
+            // 스프라이트 애니메이션 처리
         }
 
         else if (playerstate == PlayerState.defence)
         {
-            
+            // 스프라이트 애니메이션 처리
         }
 
         else if (playerstate == PlayerState.damage)
@@ -74,7 +76,7 @@ public class PlayerLife : MonoBehaviour
 
             if(DamageTime > 3f)
             {
-                DamageEndfunc();
+                playerstate = PlayerState.life;
             }
         }
     }
@@ -82,10 +84,9 @@ public class PlayerLife : MonoBehaviour
 
     public void DamageEndfunc()
     {
-        playerstate = PlayerState.life;
         DamageTime = 0f;
         PlayerIm.color = PlayerOriginalColor;
- 
+        playerstate = PlayerState.life;
     }
     public void IsLife()
     {
@@ -112,20 +113,18 @@ public class PlayerLife : MonoBehaviour
 
     public void OnPlayerDamage()
     {
-        if (!(playerstate == PlayerState.defence) &&
-            !(playerstate == PlayerState.die)
+        if ((playerstate == PlayerState.life)
             )
         {
-
             for (int i = 0; i < 5; i++)
             {
                 if (LifeIdx[i] == true)
                 {
+                    playerstate = PlayerState.damage;
                     LifeIdx[i] = false;
                     Color tempColor = Heart[i].color;
                     tempColor.a = 0f;
                     Heart[i].color = tempColor;
-                    playerstate = PlayerState.damage;
                     break;
                 }
             }
