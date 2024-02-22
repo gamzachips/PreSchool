@@ -16,12 +16,12 @@ public class LayserManager : MonoBehaviour
     public float[] FPatternTimer;
     public float[] GPatternTimer;
 
-    public Vector2[] APatternRotation;
-    public Vector2[] BPatternRotation;
-    public Vector2[] CPatternRotation;
-    public Vector2[] DPatternRotation;
-    public Vector2[] FPatternRotation;
-    public Vector2[] GPatternRotation;
+    public float[] APatternRotation;
+    public float[] BPatternRotation;
+    public float[] CPatternRotation;
+    public float[] DPatternRotation;
+    public float[] FPatternRotation;
+    public float[] GPatternRotation;
 
     public bool[] bAPatternTimer;
     public bool[] bBPatternTimer;
@@ -59,6 +59,7 @@ public class LayserManager : MonoBehaviour
     //public enum LineLayserPattern
     //{
     //    None,
+
     //    APattern,
     //    BPattern,
     //    CPattern,
@@ -73,33 +74,33 @@ public class LayserManager : MonoBehaviour
     {
         timeChecker = GameObject.Find("TimeChecker").GetComponent<TimeChecker>();
 
-        //APatternPosition = new Vector2[25];
-        //BPatternPosition = new Vector2[20];
-        //CPatternPosition = new Vector2[6];
-        //DPatternPosition = new Vector2[20];
-        //FPatternPosition = new Vector2[8];
-        //GPatternPosition = new Vector2[4];
+        APatternPosition = new Vector2[25];
+        BPatternPosition = new Vector2[20];
+        CPatternPosition = new Vector2[6];
+        DPatternPosition = new Vector2[20];
+        FPatternPosition = new Vector2[8];
+        GPatternPosition = new Vector2[4];
 
-        //bAPatternTimer = new bool[25];
-        //bBPatternTimer = new bool[20];
-        //bCPatternTimer = new bool[6];
-        //bDPatternTimer = new bool[20];
-        //bFPatternTimer = new bool[8];
-        //bGPatternTimer = new bool[4];
+        bAPatternTimer = new bool[25];
+        bBPatternTimer = new bool[20];
+        bCPatternTimer = new bool[6];
+        bDPatternTimer = new bool[20];
+        bFPatternTimer = new bool[8];
+        bGPatternTimer = new bool[4];
 
-        //APatternTimer = new float[4];
-        //BPatternTimer = new float[5];
-        //CPatternTimer = new float[2];
-        //DPatternTimer = new float[4];
-        //FPatternTimer = new float[2];
-        //GPatternTimer = new float[1];
+        APatternTimer = new float[4];
+        BPatternTimer = new float[5];
+        CPatternTimer = new float[2];
+        DPatternTimer = new float[4];
+        FPatternTimer = new float[2];
+        GPatternTimer = new float[1];
 
-        //APatternRotation = new Vector2[25];
-        //BPatternRotation = new Vector2[20];
-        //CPatternRotation = new Vector2[6];
-        //DPatternRotation = new Vector2[20];
-        //FPatternRotation = new Vector2[8];
-        //GPatternRotation = new Vector2[4];
+        APatternRotation = new float[25];
+        BPatternRotation = new float[20];
+        CPatternRotation = new float[6];
+        DPatternRotation = new float[20];
+        FPatternRotation = new float[8];
+        GPatternRotation = new float[4];
 
         //ALayserObj = new LineLayser[25];
         //BLayserObj = new LineLayser[20];
@@ -108,20 +109,171 @@ public class LayserManager : MonoBehaviour
         //FLayserObj = new LineLayser[8];
         //GLayserObj = new LineLayser[4];
 
+        APatternTimer[0] = 8f;
+        APatternTimer[1] = 8.05f;
+        APatternTimer[2] = 8.1f;
+        APatternTimer[3] = 8.15f;
+        APatternTimer[4] = 8.2f;
+        APatternTimer[5] = 16f;
+        APatternTimer[6] = 16.05f;
+        APatternTimer[7] = 16.1f;
+        APatternTimer[8] = 16.15f;
+        APatternTimer[9] = 16.2f;
+        APatternTimer[10] = 24f;
+        APatternTimer[11] = 24.05f;
+        APatternTimer[12] = 24.1f;
+        APatternTimer[13] = 24.15f;
+        APatternTimer[14] = 24.2f;
+        APatternTimer[15] = 32f;
+        APatternTimer[16] = 32.05f;
+        APatternTimer[17] = 32.1f;
+        APatternTimer[18] = 32.15f;
+        APatternTimer[19] = 32.2f;
+        APatternTimer[20] = 88f;
+        APatternTimer[21] = 88.05f;
+        APatternTimer[22] = 88.1f;
+        APatternTimer[23] = 88.15f;
+        APatternTimer[24] = 88.2f;
+
+        BPatternTimer[0] = 16f;
+        BPatternTimer[1] = 16.05f;
+        BPatternTimer[2] = 16.1f;
+        BPatternTimer[3] = 16.15f;
+        BPatternTimer[4] = 24.2f;
+        BPatternTimer[5] = 24f;
+        BPatternTimer[6] = 24.05f;
+        BPatternTimer[7] = 24.1f;
+        BPatternTimer[8] = 32.15f;
+        BPatternTimer[9] = 32.2f;
+        BPatternTimer[10] = 32f;
+        BPatternTimer[11] = 32.05f;
+        BPatternTimer[12] = 56.1f;
+        BPatternTimer[13] = 56.15f;
+        BPatternTimer[14] = 56.2f;
+        BPatternTimer[15] = 56f;
+        BPatternTimer[16] = 72.05f;
+        BPatternTimer[17] = 72.1f;
+        BPatternTimer[18] = 72.15f;
+        BPatternTimer[19] = 72.2f;
+
+        CPatternTimer[0] = 40f;
+        CPatternTimer[1] = 40.05f;
+        CPatternTimer[2] = 40.1f;
+        CPatternTimer[3] = 48.15f;
+        CPatternTimer[4] = 48.2f;
+        CPatternTimer[5] = 48.2f;
+
+        DPatternTimer[0] = 24f;
+        DPatternTimer[1] = 24.05f;
+        DPatternTimer[2] = 24.1f;
+        DPatternTimer[3] = 24.15f;
+        DPatternTimer[4] = 24.2f;
+        DPatternTimer[5] = 40f;
+        DPatternTimer[6] = 40.05f;
+        DPatternTimer[7] = 40.1f;
+        DPatternTimer[8] = 40.15f;
+        DPatternTimer[9] = 40.2f;
+        DPatternTimer[10] = 72f;
+        DPatternTimer[11] = 72.05f;
+        DPatternTimer[12] = 72.1f;
+        DPatternTimer[13] = 72.15f;
+        DPatternTimer[14] = 72.2f;
+        DPatternTimer[15] = 80f;
+        DPatternTimer[16] = 80.05f;
+        DPatternTimer[17] = 80.1f;
+        DPatternTimer[18] = 80.15f;
+        DPatternTimer[19] = 80.2f;
+
+        FPatternTimer[0] = 32f;
+        FPatternTimer[1] = 32.05f;
+        FPatternTimer[2] = 32.1f;
+        FPatternTimer[3] = 32.15f;
+        FPatternTimer[4] = 72.2f;
+        FPatternTimer[5] = 72.05f;
+        FPatternTimer[6] = 72.1f;
+        FPatternTimer[7] = 72.15f;
+
+        GPatternTimer[0] = 64f;
+        GPatternTimer[1] = 64.05f;
+        GPatternTimer[2] = 64.1f;
+        GPatternTimer[3] = 64.15f;
+
+        //포지션
+        
+        APatternPosition[0] = new Vector2(3.27f, 2.58f);
+        APatternPosition[1] = new Vector2(2.62f, 1.4f);
+        APatternPosition[2] = new Vector2(1.87f, -3.03f);
+        APatternPosition[3] = new Vector2(-1.27f, 3.26f);
+        APatternPosition[4] = new Vector2(-1.75f, 2.09f);
+
+        APatternRotation[0] = -214.9f;
+        APatternRotation[1] = 415.0f;
+        APatternRotation[2] = 361.3f;
+        APatternRotation[3] = -319f;
+        APatternRotation[4] = -496.2f;
+
+
+        BPatternPosition[0] = new Vector2(0.18f, 2.85f);
+        BPatternPosition[1] = new Vector2(0.18f, 0.64f);
+        BPatternPosition[2] = new Vector2(0.18f, -1.29f);
+        BPatternPosition[3] = new Vector2(0.18f, -3.19f);
+
+        BPatternRotation[0] = 0f;
+        BPatternRotation[1] = 0f;
+        BPatternRotation[2] = 0f;
+        BPatternRotation[3] = 0f;
+
+
+
+        CPatternPosition[0] = new Vector2(0.18f, -3.19f);
+        CPatternPosition[1] = new Vector2(0.46f, 1.48f);
+        CPatternPosition[2] = new Vector2(-1.39f, 2.31f);
+
+        CPatternRotation[0] = 40.27f;
+        CPatternRotation[1] = 142.5f;
+        CPatternRotation[2] = 219.2f;
+
+
+
+        DPatternTimer[0] = 24f;
+        DPatternTimer[1] = 24.05f;
+        DPatternTimer[2] = 24.1f;
+        DPatternTimer[3] = 24.15f;
+        DPatternTimer[4] = 24.2f;
+
+        DPatternRotation[0] = 0f;
+        DPatternRotation[1] = 0f;
+        DPatternRotation[2] = 0f;
+        DPatternRotation[3] = 0f;
+        DPatternRotation[4] = 0f;
+
+
+
+        FPatternTimer[0] = 32f;
+        FPatternTimer[1] = 32.05f;
+        FPatternTimer[2] = 32.1f;
+        FPatternTimer[3] = 32.15f;
+
+
+        GPatternTimer[0] = 64f;
+        GPatternTimer[1] = 64.05f;
+        GPatternTimer[2] = 64.1f;
+        GPatternTimer[3] = 64.15f;
+
 
         for (int i = 0; i < 5; i++)
         {
-            //bAPatternTimer[i] = false; 
-            //bDPatternTimer[i] = false;
-            //if(i < 3)
-            //{
-            //    bCPatternTimer[i] = false;
-            //}
-            //else if (i < 4) 
-            //{
-            //    bFPatternTimer[i] = false;
-            //    bGPatternTimer[i] = false;
-            //}
+            bAPatternTimer[i] = false;
+            bDPatternTimer[i] = false;
+            if (i < 3)
+            {
+                bCPatternTimer[i] = false;
+            }
+            else if (i < 4)
+            {
+                bFPatternTimer[i] = false;
+                bGPatternTimer[i] = false;
+            }
         }
 
         //  최대 레이저 수

@@ -113,10 +113,10 @@ TextureImporter:
       name: effect_sprite_blue_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1060.2858
-        width: 1447
-        height: 176.71428
+        x: 48
+        y: 1131
+        width: 1351
+        height: 106
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,97 +131,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_blue_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 884.2857
-        width: 1447
-        height: 176.71428
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e938f08fe4a4d640992eccd04460de1
-      internalID: 807541570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: effect_sprite_blue_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 708.2857
-        width: 1447
-        height: 176.71428
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c90db74bd932f7f4b8ce25323aa30b67
-      internalID: 258400669
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: effect_sprite_blue_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 532.2857
-        width: 1447
-        height: 176.71428
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 655a2b8de4cb6be45935ae4624c9e1a9
-      internalID: -293696445
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: effect_sprite_blue_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 356.2857
-        width: 1447
-        height: 176.71428
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1cb93c2612c2ba344a923fd1250aa538
-      internalID: -858064214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: effect_sprite_blue_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 180.28572
-        width: 1447
-        height: 176.71428
+        x: 4
+        y: 964
+        width: 1439
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,10 +155,10 @@ TextureImporter:
       name: effect_sprite_blue_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4.285721
-        width: 1447
-        height: 176.71428
+        x: 2
+        y: 799
+        width: 1445
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,6 +168,90 @@ TextureImporter:
       bones: []
       spriteID: a9d4c6cb0d310264bb756a3a1a18126a
       internalID: 987764748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_sprite_blue_7
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 560
+        width: 1445
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef27649fbd72b6f49bca56841acf42b7
+      internalID: 1436269313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_sprite_blue_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 321
+        width: 1444
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3875cdb8b400d84f90ff4ef209f6195
+      internalID: -618434506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_sprite_blue_9
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 160
+        width: 1439
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5d5a9cf8bc44e4883e2f4e794c28aa
+      internalID: -1965735771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_sprite_blue_10
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 0
+        width: 1340
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686c8d32b4eca6340a48c54153a4d3a1
+      internalID: 852157400
       vertices: []
       indices: 
       edges: []
@@ -269,11 +269,19 @@ TextureImporter:
     nameFileIdTable:
       effect_sprite_blue_0: 1056574478
       effect_sprite_blue_1: 807541570
+      effect_sprite_blue_10: 852157400
+      effect_sprite_blue_11: -446240075
+      effect_sprite_blue_12: -1135606650
+      effect_sprite_blue_13: 970426780
+      effect_sprite_blue_14: -1379898992
       effect_sprite_blue_2: 258400669
       effect_sprite_blue_3: -293696445
       effect_sprite_blue_4: -858064214
       effect_sprite_blue_5: -1863029949
       effect_sprite_blue_6: 987764748
+      effect_sprite_blue_7: 1436269313
+      effect_sprite_blue_8: -618434506
+      effect_sprite_blue_9: -1965735771
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
