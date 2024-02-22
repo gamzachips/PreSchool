@@ -53,6 +53,16 @@ public class PlayerLife : MonoBehaviour
     {
         IsLife();
 
+
+        if (!(playerstate == PlayerState.invincible))
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                playerstate = PlayerState.invincible;
+
+            }
+        }
+
         if (playerstate == PlayerState.life)
         {
             DamageEndfunc();
@@ -84,8 +94,16 @@ public class PlayerLife : MonoBehaviour
 
         else if(playerstate == PlayerState.die)
         {
-            Debug.Log("Die");
-            SceneManager.LoadScene("ResultScene");
+            //Debug.Log("Die");
+            //SceneManager.LoadScene("ResultScene");
+        }
+
+        else if (playerstate == PlayerState.invincible)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                playerstate = PlayerState.life;
+            }
         }
     }
 
