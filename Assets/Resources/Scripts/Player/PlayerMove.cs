@@ -7,9 +7,25 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     float speed = 100f;
 
+    [SerializeField]
+    Sprite front;
+
+    [SerializeField]
+    Sprite back;
+
+    [SerializeField]
+    Sprite left;
+
+
     public float Speed {  get { return speed; } set {  speed = value; } }
 
- 
+    private SpriteRenderer renderer;
+
+    private void Start()
+    {
+      renderer = GetComponent<SpriteRenderer>();
+    }
+
     void Update()
     {
         /*float h = Input.GetAxis("Horizontal");
@@ -22,29 +38,28 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(Vector3.up * Time.deltaTime * speed);
+            renderer.sprite = back;
         }
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
 
         {
-
             transform.Translate(Vector3.left * Time.deltaTime * speed);
-
+            renderer.sprite = left;
+            renderer.flipX = false;
         }
 
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-
         {
-
             transform.Translate(Vector3.right * Time.deltaTime * speed);
-
+            renderer.sprite = left;
+            renderer.flipX = true;
         }
 
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-
         {
-
             transform.Translate(Vector3.down * Time.deltaTime * speed);
+            renderer.sprite = front;
 
         }
     }
