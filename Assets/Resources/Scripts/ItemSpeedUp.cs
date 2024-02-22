@@ -13,7 +13,12 @@ public class ItemSpeedUp : Item
     float originSpeed = 1f;
 
     PlayerMove playerMove;
-    
+
+    private void Start()
+    {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision == null) return;

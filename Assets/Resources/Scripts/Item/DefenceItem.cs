@@ -11,6 +11,7 @@ public class DefenceItem : Item
     // Start is called before the first frame update
     void Start()
     {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
     }
 
