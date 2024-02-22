@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class PlayerLife : MonoBehaviour
 {
-    public int MaxLife = 1;
+    public int MaxLife = 5;
     public int CurLife = 3;
     public SpriteRenderer PlayerIm;
 
@@ -58,6 +58,7 @@ public class PlayerLife : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
+                Debug.Log("Check");
                 playerstate = PlayerState.invincible;
 
             }
@@ -94,8 +95,8 @@ public class PlayerLife : MonoBehaviour
 
         else if(playerstate == PlayerState.die)
         {
-            //Debug.Log("Die");
-            //SceneManager.LoadScene("ResultScene");
+            Debug.Log("Die");
+            SceneManager.LoadScene("ResultScene");
         }
 
         else if (playerstate == PlayerState.invincible)
