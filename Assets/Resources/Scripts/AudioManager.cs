@@ -50,7 +50,7 @@ public class AudioManager : MonoBehaviour
     private void LoadAudios()
     {
         mainMusicClip = Resources.Load<AudioClip>("Audios/MainMusic");
-        gameMusicClip = Resources.Load<AudioClip>("Audios/Game");
+        //gameMusicClip = Resources.Load<AudioClip>("Audios/Game");
         itemSoundClip = Resources.Load<AudioClip>("Audios/ItemPickUp");
         buttonSoundClip = Resources.Load<AudioClip>("Audios/ButtonClick");
     }
