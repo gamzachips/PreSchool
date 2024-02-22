@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Resources/Scenes/PlayLibrary.unity
     guid: 8cd8cb2709268fe44b02fc2a663f98dc
+  - enabled: 1
+    path: Assets/Resources/Scenes/ResultScene.unity
+    guid: 1a7f81a04307e0043858a40eeb0b8157
+  - enabled: 1
+    path: Assets/Resources/Scenes/EndingScene.unity
+    guid: ce3d76671127c074181aa55276c41680
+  - enabled: 1
+    path: Assets/Resources/Scenes/CutScene.unity
+    guid: df0810c52ab0c0844a6277537a8670c2
   m_configObjects: {}
