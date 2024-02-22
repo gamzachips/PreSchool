@@ -113,145 +113,19 @@ TextureImporter:
       name: effect_sprite_blue_0
       rect:
         serializedVersion: 2
-        x: 47
-        y: 1120
-        width: 1347
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba1e14ff34c28014e93de0f747cc54ed
-      internalID: 1056574478
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: effect_sprite_blue_5
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 964
-        width: 1439
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b265e868770d76345b3acdbea2bda264
-      internalID: -1863029949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: effect_sprite_blue_6
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 799
-        width: 1445
-        height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9d4c6cb0d310264bb756a3a1a18126a
-      internalID: 987764748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: effect_sprite_blue_7
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 560
-        width: 1445
-        height: 191
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e9bb70941783ac40812aeb643a933b5
-      internalID: 1453859872
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: effect_sprite_blue_8
-      rect:
-        serializedVersion: 2
         x: 0
-        y: 321
-        width: 1444
-        height: 191
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 760243496358bda49906b371e84db69e
-      internalID: -1561701634
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: effect_sprite_blue_9
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 160
-        width: 1439
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3fa0cabf0427e104fb0ba5c33f3edc1b
-      internalID: -1445053321
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: effect_sprite_blue_10
-      rect:
-        serializedVersion: 2
-        x: 47
         y: 0
-        width: 1332
-        height: 108
+        width: 0
+        height: 0
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: df30c66111cf86949a8866a4ae08f0c6
-      internalID: 952489831
+      spriteID: a808d028712e2fd20800000000000000
+      internalID: 3310957266664784010
       vertices: []
       indices: 
       edges: []
@@ -259,7 +133,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -267,21 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      effect_sprite_blue_0: 1056574478
-      effect_sprite_blue_1: 807541570
-      effect_sprite_blue_10: 952489831
-      effect_sprite_blue_11: 1041177202
-      effect_sprite_blue_12: 350733494
-      effect_sprite_blue_13: -339997618
-      effect_sprite_blue_14: -4652707
-      effect_sprite_blue_2: 258400669
-      effect_sprite_blue_3: -293696445
-      effect_sprite_blue_4: -858064214
-      effect_sprite_blue_5: -1863029949
-      effect_sprite_blue_6: 987764748
-      effect_sprite_blue_7: 1453859872
-      effect_sprite_blue_8: -1561701634
-      effect_sprite_blue_9: -1445053321
+      effect_sprite_blue_0: 3310957266664784010
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
