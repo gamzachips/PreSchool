@@ -31,11 +31,4 @@ public class Bullet2 : MonoBehaviour {
             }
         }
     }
-
-    void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.tag == "Wall") {
-            currentIndex = (currentIndex + 1) % positions.Length;
-            timer = 0.0f;
-        }
-    }
 }
