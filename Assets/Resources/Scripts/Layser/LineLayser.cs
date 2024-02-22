@@ -17,10 +17,10 @@ public class LineLayser : MonoBehaviour
 
     void Update()
     {
-        LineLayserfunc(new Vector2(0, 0), 0, 0);
+        //SelectLineLayserSprite(new Vector2(0, 0), 0, 0);
     }
 
-    public void LineLayserfunc(Vector2 Position, float StartTime, int IndexNum)
+    public void SelectLineLayserSprite(Vector2 Position, float StartTime, int IndexNum)
     {
         sRender.sprite = newSprite[IndexNum];
     }
