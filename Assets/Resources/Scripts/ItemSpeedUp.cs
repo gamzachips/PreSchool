@@ -35,6 +35,8 @@ public class ItemSpeedUp : Item
             //아이템은 충돌 처리 해제, 렌더러 해제
             GetComponent<BoxCollider2D>().enabled = false;
             GetComponent<SpriteRenderer>().enabled = false;
+
+            AudioManager.Instance.PlayItemSound();
             //일정 시간 후 복구
             StartCoroutine(RestoreSpeed());
         }

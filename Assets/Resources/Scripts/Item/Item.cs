@@ -41,14 +41,6 @@ public class Item : MonoBehaviour
     Color origin = new Color(1, 1, 1, 1);
     Color transparent = new Color(1, 1, 1, 0.3f);
 
-    //오디오 매니저
-    protected AudioManager audioManager;
-    
-    private void Start()
-    {
-        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>(); 
-    }
-
 
     private void Update()
     {

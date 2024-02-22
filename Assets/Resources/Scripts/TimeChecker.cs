@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class TimeChecker : MonoBehaviour
 {
     [SerializeField]
-    float totalTime = 96f;
+    float totalTime = 97f;
 
     float nowTime = 0f;
     public float NowTime { get { return nowTime; } }

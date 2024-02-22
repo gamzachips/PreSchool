@@ -10,6 +10,7 @@ public class ScneManager : MonoBehaviour
     {
         SceneManager.LoadScene("RoopAI");
         ScoreSystem.Instance.Reset();
+        AudioManager.Instance.PlayGameMusic();
     }
 
     public void ChangeCutScene()
@@ -25,6 +26,7 @@ public class ScneManager : MonoBehaviour
     public void ChangeMenu()
     {
         SceneManager.LoadScene("MenuScene");
+        AudioManager.Instance.PlayMainMusic();
     }
     public void ChangeEnding()
     {
@@ -33,5 +35,6 @@ public class ScneManager : MonoBehaviour
     public void ChangeResult()
     {
         SceneManager.LoadScene("ResultScene");
+        AudioManager.Instance.MuteMusic();
     }
 }

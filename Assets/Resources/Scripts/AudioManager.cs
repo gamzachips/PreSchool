@@ -5,57 +5,84 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [Serializable]
-    public class MusicTimings
+    //싱글톤
+    static AudioManager instance;
+    public static AudioManager Instance { get { Init(); return instance; } }
+
+    static void Init()
     {
-        public float[] elements;
+        if (instance == null)
+        {
+            GameObject go = GameObject.Find("AudioManager");
+            if (go == null)
+            {
+                go = new GameObject { name = "AudioManager" };
+                go.AddComponent<AudioManager>();
+            }
+            DontDestroyOnLoad(go);
+            instance = go.GetComponent<AudioManager>();
+        }
     }
-    public MusicTimings[] musicTimings;
 
-    [Serializable]
-    public class MusicClips
-    {
-        public AudioClip[] elements;
-    }
-    public MusicClips[] musicClips;
+    AudioSource musicSource;
+    AudioSource effectSoundSource;
 
-    [SerializeField]
-    List<AudioSource> musicSources;
-
-    [SerializeField]
-    AudioSource itemSoundSource;
-
-    [SerializeField]
+    AudioClip mainMusicClip;
+    AudioClip gameMusicClip;
     AudioClip itemSoundClip;
+    AudioClip buttonSoundClip;
 
-    TimeChecker timeChecker;
-    
     private void Start()
     {
-        timeChecker = GameObject.Find("TimeChecker").GetComponent<TimeChecker>();
-        //itemSoundSource.clip = itemSoundClip;
+        Init();
+        
+        //오디오 소스 생성
+        musicSource = gameObject.AddComponent<AudioSource>();
+        effectSoundSource = gameObject.AddComponent<AudioSource>();
+
+        musicSource.playOnAwake = false;
+        effectSoundSource.playOnAwake = false;
+        effectSoundSource.volume = 0.5f;
+
+        LoadAudios();
     }
 
-    void Update()
+    private void LoadAudios()
     {
-        for(int i = 0; i < musicTimings.Length; i++)
-        {
-            for (int j = 0; j < musicTimings[i].elements[j]; j++)
-            {
-                //음악을 시작할 시간이면
-                if (Mathf.Abs(musicTimings[i].elements[j] - timeChecker.NowTime) < Time.deltaTime)
-                {
-                    //음악을 올린다
-                    musicSources[i].clip = musicClips[i].elements[j];
-                    musicSources[i].Play();
-                }
+        mainMusicClip = Resources.Load<AudioClip>("Audios/MainMusic");
+        gameMusicClip = Resources.Load<AudioClip>("Audios/GameMusic");
+        itemSoundClip = Resources.Load<AudioClip>("Audios/ItemPickUp");
+        buttonSoundClip = Resources.Load<AudioClip>("Audios/ButtonClick");
+    }
 
-            }
-        }
+    public void PlayMainMusic()
+    {
+        musicSource.clip = mainMusicClip;
+        musicSource.loop = true;
+        musicSource.Play();
+    }
+    public void PlayGameMusic()
+    {
+        musicSource.clip = gameMusicClip;
+        musicSource.loop = false;
+        musicSource.Play(44100);
+    }
+
+    public void MuteMusic()
+    {
+        musicSource.mute = true;
+    }
+
+    public void PlayButtonSound()
+    {
+        effectSoundSource.clip = buttonSoundClip;
+        effectSoundSource.Play();
     }
 
     public void PlayItemSound()
     {
-        itemSoundSource.Play();
+        effectSoundSource.clip = itemSoundClip;
+        effectSoundSource.Play();
     }
+
 }
