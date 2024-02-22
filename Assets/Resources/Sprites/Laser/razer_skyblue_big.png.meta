@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ddeb684eec90a63479b223ae267cd48c
+guid: b3d90c0d155f64e4b8bebe089387aa08
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: effect_sprite_blue_0
+      name: razer_skyblue_big_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1060.2858
-        width: 1447
-        height: 176.71428
+        x: 14
+        y: 3521
+        width: 1473
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba1e14ff34c28014e93de0f747cc54ed
-      internalID: 1056574478
+      spriteID: 12111fe678c47124ab34a02a6cbb463f
+      internalID: -176328962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_blue_1
+      name: razer_skyblue_big_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 884.2857
-        width: 1447
-        height: 176.71428
+        x: 14
+        y: 2923
+        width: 1473
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e938f08fe4a4d640992eccd04460de1
-      internalID: 807541570
+      spriteID: ebb9c8895791e5740b592d0204aa4ce7
+      internalID: 2078184731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_blue_2
+      name: razer_skyblue_big_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 708.2857
-        width: 1447
-        height: 176.71428
+        y: 2207
+        width: 1500
+        height: 341
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c90db74bd932f7f4b8ce25323aa30b67
-      internalID: 258400669
+      spriteID: 92dc390e0bedd524e9191a94c9191ea0
+      internalID: 900851951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_blue_3
+      name: razer_skyblue_big_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 532.2857
-        width: 1447
-        height: 176.71428
+        x: 14
+        y: 1756
+        width: 1473
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 655a2b8de4cb6be45935ae4624c9e1a9
-      internalID: -293696445
+      spriteID: 8a549301f37e0004695f2dbbca147d76
+      internalID: -1413729899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_blue_4
+      name: razer_skyblue_big_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 356.2857
-        width: 1447
-        height: 176.71428
+        y: 944
+        width: 1500
+        height: 531
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cb93c2612c2ba344a923fd1250aa538
-      internalID: -858064214
+      spriteID: 862480e7dc76ab44988f8fb4faf9df73
+      internalID: -1690300537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_blue_5
+      name: razer_skyblue_big_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 180.28572
-        width: 1447
-        height: 176.71428
+        x: 2
+        y: 465
+        width: 1498
+        height: 329
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b265e868770d76345b3acdbea2bda264
-      internalID: -1863029949
+      spriteID: dfd5a9a1177fbd0468587b0820f4e0f5
+      internalID: 287755828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_blue_6
+      name: razer_skyblue_big_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4.285721
-        width: 1447
-        height: 176.71428
+        x: 15
+        y: 21
+        width: 1472
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9d4c6cb0d310264bb756a3a1a18126a
-      internalID: 987764748
+      spriteID: 50de8a3b58f44d9449bbc87d70d8c9a3
+      internalID: -1559807129
       vertices: []
       indices: 
       edges: []
@@ -267,13 +267,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      effect_sprite_blue_0: 1056574478
-      effect_sprite_blue_1: 807541570
-      effect_sprite_blue_2: 258400669
-      effect_sprite_blue_3: -293696445
-      effect_sprite_blue_4: -858064214
-      effect_sprite_blue_5: -1863029949
-      effect_sprite_blue_6: 987764748
+      razer_skyblue_big_0: -176328962
+      razer_skyblue_big_1: 2078184731
+      razer_skyblue_big_12: -1789268573
+      razer_skyblue_big_13: 54688970
+      razer_skyblue_big_14: 1498967535
+      razer_skyblue_big_2: 900851951
+      razer_skyblue_big_3: -1690300537
+      razer_skyblue_big_4: 287755828
+      razer_skyblue_big_5: -1413729899
+      razer_skyblue_big_6: -1559807129
+      razer_skyblue_big_7: -1905999912
+      razer_skyblue_big_8: 878847676
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

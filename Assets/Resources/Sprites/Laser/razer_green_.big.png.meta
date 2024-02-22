@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6ea7961684810bd48b0bd3ace0df4f45
+guid: e5f3013f4df4436438e235455b7f41cb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: effect_sprite_green_0
+      name: razer_green_.big_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1060.2858
-        width: 1447
-        height: 176.71428
+        x: 14
+        y: 3521
+        width: 1473
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e9ccf1d0016c2c4488df90c99a9baf7
-      internalID: 1527122573
+      spriteID: 7d96669fc5306b741b5c52b56b3986ea
+      internalID: 838929668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_green_1
+      name: razer_green_.big_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 884.2857
-        width: 1447
-        height: 176.71428
+        x: 14
+        y: 2923
+        width: 1473
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 371d53a971fa4c84a95da7b5e0df51c2
-      internalID: -1859908324
+      spriteID: e991d199ad9db9e41bddef6227e4222c
+      internalID: -979382773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_green_2
+      name: razer_green_.big_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 708.2857
-        width: 1447
-        height: 176.71428
+        y: 2208
+        width: 1500
+        height: 355
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84099414e28cc294ebbeb87dd169f745
-      internalID: -1759855443
+      spriteID: 67ae387ff5544cd43aa7c4c3b256cdc3
+      internalID: -1417193315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_green_3
+      name: razer_green_.big_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 532.2857
-        width: 1447
-        height: 176.71428
+        x: 14
+        y: 1759
+        width: 1473
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f31df5c8033dd69479fae53f9261a130
-      internalID: -217441831
+      spriteID: 4d6791f8c43c72b4da9726b86e2b5451
+      internalID: 1463376131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_green_4
+      name: razer_green_.big_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 356.2857
-        width: 1447
-        height: 176.71428
+        y: 947
+        width: 1500
+        height: 531
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03b6cb5bee911714c9cf50bd564a90b5
-      internalID: 738617271
+      spriteID: ea3b75c0cf16aab42afa844f7053b301
+      internalID: -745866617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_green_5
+      name: razer_green_.big_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 180.28572
-        width: 1447
-        height: 176.71428
+        x: 10
+        y: 467
+        width: 1490
+        height: 325
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9430bb7d0f503a54eb13c667d7309ea7
-      internalID: -557694002
+      spriteID: 7aaacc52d3de337459615e62548376be
+      internalID: -6920554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: effect_sprite_green_6
+      name: razer_green_.big_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4.285721
-        width: 1447
-        height: 176.71428
+        x: 15
+        y: 21
+        width: 1472
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dbff0a05365dd74980d302409a49c64
-      internalID: -1797136332
+      spriteID: 9f87d7e387ab0a04f915b6c9cdf35374
+      internalID: -1882094536
       vertices: []
       indices: 
       edges: []
@@ -267,13 +267,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      effect_sprite_green_0: 1527122573
-      effect_sprite_green_1: -1859908324
-      effect_sprite_green_2: -1759855443
-      effect_sprite_green_3: -217441831
-      effect_sprite_green_4: 738617271
-      effect_sprite_green_5: -557694002
-      effect_sprite_green_6: -1797136332
+      razer_green_.big_0: 838929668
+      razer_green_.big_1: -979382773
+      razer_green_.big_12: 893250641
+      razer_green_.big_13: 1386470174
+      razer_green_.big_14: -1690694854
+      razer_green_.big_16: -1959012145
+      razer_green_.big_2: -1417193315
+      razer_green_.big_3: -745866617
+      razer_green_.big_4: -6920554
+      razer_green_.big_5: 1463376131
+      razer_green_.big_6: -1882094536
+      razer_green_.big_7: -1711256108
+      razer_green_.big_8: 882836048
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
