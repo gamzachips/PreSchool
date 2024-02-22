@@ -15,6 +15,7 @@ public class SliderCheck : MonoBehaviour
     void Start()
     {
         slider = GetComponent<Slider>();
+       
     }
 
     // Update is called once per frame
@@ -25,7 +26,7 @@ public class SliderCheck : MonoBehaviour
         else
             transform.Find("Fill Area").gameObject.SetActive(true);
 
-        slider.value = scoreSystem.Score;
+        slider.value = 33000 - scoreSystem.Score;
 
 
     }
