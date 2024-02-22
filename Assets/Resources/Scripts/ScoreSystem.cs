@@ -12,12 +12,9 @@ public class ScoreSystem : MonoBehaviour
 {
 
     [SerializeField]
-    TextMeshProUGUI gradeText;
-
-    [SerializeField]
     int maxScore = 33000;
 
-    GradeType grade = GradeType.S;
+    GradeType grade = GradeType.C;
     public GradeType Grade { get { return grade; } }
     int score = 0;
 
@@ -35,11 +32,7 @@ public class ScoreSystem : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
     }
-    public void Update()
-    {
-        if(gradeText != null)
-            gradeText.SetText(grade.ToString());
-    }
+
     
     private void SetGrade()
     {
