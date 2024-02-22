@@ -21,6 +21,9 @@ public class ResultSceneUISystem : MonoBehaviour
     [SerializeField]
     Button endingButton;
 
+    [SerializeField]
+    TextMeshProUGUI rankOrGameover;
+
     ScoreSystem scoreSystem;
 
     void Start()
@@ -28,9 +31,15 @@ public class ResultSceneUISystem : MonoBehaviour
         //게임아웃이면 엔딩버튼 비활성화
         scoreSystem = GameObject.Find("ScoreSystem").GetComponent<ScoreSystem>();
         if(scoreSystem.Grade == 'F')
+        {
             endingButton.gameObject.SetActive(false);
+            rankOrGameover.SetText("Game Over...");
+        }
         else
+        {
             endingButton.gameObject.SetActive(true);
+            rankOrGameover.SetText("Rank");
+        }
 
         totalScore.SetText(scoreSystem.Score.ToString());
         score500.SetText(scoreSystem.scoreItem500.ToString());
