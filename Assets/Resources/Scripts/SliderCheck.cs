@@ -9,9 +9,6 @@ public class SliderCheck : MonoBehaviour
 
     Slider slider;
 
-    [SerializeField]
-    ScoreSystem scoreSystem;
-
     void Start()
     {
         slider = GetComponent<Slider>();
@@ -26,7 +23,7 @@ public class SliderCheck : MonoBehaviour
         else
             transform.Find("Fill Area").gameObject.SetActive(true);
 
-        slider.value = 33000 - scoreSystem.Score;
+        slider.value = 33000 - ScoreSystem.Instance.Score;
 
 
     }

@@ -9,8 +9,8 @@ public class ScneManager : MonoBehaviour
     public void ChangeMain()
     {
         SceneManager.LoadScene("RoopAI");
-        // ScoreSystem.Instance.Reset();
-        // AudioManager.Instance.PlayGameMusic();
+         ScoreSystem.Instance.Reset();
+         AudioManager.Instance.PlayGameMusic();
     }
 
     public void ChangeCutScene()

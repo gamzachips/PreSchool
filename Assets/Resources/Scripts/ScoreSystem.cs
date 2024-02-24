@@ -36,7 +36,7 @@ public class ScoreSystem : MonoBehaviour
     int maxScore = 33000;
 
     GradeType grade = GradeType.C;
-    public GradeType Grade { get { return grade; } }
+    public GradeType Grade { get { return grade; } set { grade = value; } }
     int score = 0;
 
     public int scoreItem500 = 0;

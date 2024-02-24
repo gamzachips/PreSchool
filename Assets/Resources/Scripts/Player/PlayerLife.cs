@@ -91,6 +91,8 @@ public class PlayerLife : MonoBehaviour
         else if(playerstate == PlayerState.die)
         {
             Debug.Log("Die");
+            ScoreSystem.Instance.Grade = GradeType.F;
+            AudioManager.Instance.MuteMusic();
             SceneManager.LoadScene("ResultScene");
         }
         else if (playerstate == PlayerState.invincible && Input.GetKeyDown(KeyCode.L))
