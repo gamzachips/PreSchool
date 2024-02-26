@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
@@ -28,11 +28,10 @@ public class HPItem : Item
     {
         if (collision == null) return;
 
-        if (collision.gameObject.CompareTag("Player") &&
-            !(playerlife.playerstate == PlayerState.defence) &&
-            !(playerlife.playerstate == PlayerState.die) )
+        if (collision.gameObject.CompareTag("Player"))
         {
-            for (int i = playerlife.LifeIdx.Count() - 1; i >= 0; i--)
+            playerlife = collision.gameObject.GetComponent<PlayerLife>();
+            for (int i = 0; i < playerlife.LifeIdx.Length; i++)
             {
                 if (playerlife.LifeIdx[i] == false)
                 {
@@ -41,11 +40,10 @@ public class HPItem : Item
                     tempColor.a = 1f;
                     playerlife.Heart[i].color = tempColor;
                     AudioManager.Instance.PlayItemSound();
+                    Destroy(this.gameObject);
                     break;
                 }
             }
-            //아이템 삭제
-            Destroy(this.gameObject);
         }
     }
 
