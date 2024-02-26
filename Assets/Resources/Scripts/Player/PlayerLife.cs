@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -139,8 +139,7 @@ public class PlayerLife : MonoBehaviour
         else if (playerstate == PlayerState.defence)
         {
             playerstate = PlayerState.life;
-
-            // 이미지 넣어주기
+            gameObject.GetComponentInChildren<Transform>().GetChild(0).gameObject.SetActive(false);
         }
     }
 
