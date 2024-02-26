@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -13,10 +13,10 @@ public class PlayerLife : MonoBehaviour
     public int CurLife = 3;
     public SpriteRenderer PlayerIm;
 
-    //ÇÇ°İ°ü·Ã
+    //í”¼ê²©ê´€ë ¨
     public float DamageTime = 0;
 
-    //¶óÀÌÇÁ
+    //ë¼ì´í”„
     [SerializeField]
     public bool[] LifeIdx;
     public Image[] Heart;
@@ -66,11 +66,11 @@ public class PlayerLife : MonoBehaviour
         {
             DamageEndfunc();
 
-            // ½ºÇÁ¶óÀÌÆ® ¾Ö´Ï¸ŞÀÌ¼Ç Ã³¸®
+            // ìŠ¤í”„ë¼ì´íŠ¸ ì• ë‹ˆë©”ì´ì…˜ ì²˜ë¦¬
         }
         else if (playerstate == PlayerState.defence)
         {
-            // ½ºÇÁ¶óÀÌÆ® ¾Ö´Ï¸ŞÀÌ¼Ç Ã³¸®
+            // ìŠ¤í”„ë¼ì´íŠ¸ ì• ë‹ˆë©”ì´ì…˜ ì²˜ë¦¬
         }
         else if (playerstate == PlayerState.damage)
         {
@@ -140,7 +140,7 @@ public class PlayerLife : MonoBehaviour
         {
             playerstate = PlayerState.life;
 
-            // ÀÌ¹ÌÁö ³Ö¾îÁÖ±â
+            // ì´ë¯¸ì§€ ë„£ì–´ì£¼ê¸°
         }
     }
 

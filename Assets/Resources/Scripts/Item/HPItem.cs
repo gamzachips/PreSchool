@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
@@ -44,7 +44,7 @@ public class HPItem : Item
                     break;
                 }
             }
-            //æ∆¿Ã≈€ ªË¡¶
+            //ÏïÑÏù¥ÌÖú ÏÇ≠Ï†ú
             Destroy(this.gameObject);
         }
     }

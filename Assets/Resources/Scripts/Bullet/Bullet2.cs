@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class Bullet2 : MonoBehaviour {
     public Vector3[] positions;
@@ -7,7 +7,7 @@ public class Bullet2 : MonoBehaviour {
     private float tempTime = 0.0f;
     private float timer = 0.0f;
     private int bulletTouchCount = 0;
-    private bool changedTime = false; // time °ªÀ» º¯°æÇß´ÂÁö ¿©ºÎ¸¦ ÀúÀåÇÏ´Â º¯¼ö¸¦ Ãß°¡ÇÕ´Ï´Ù.
+    private bool changedTime = false; // time ê°’ì„ ë³€ê²½í–ˆëŠ”ì§€ ì—¬ë¶€ë¥¼ ì €ì¥í•˜ëŠ” ë³€ìˆ˜ë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
 
     void Update() {
         timer += Time.deltaTime;
@@ -19,13 +19,13 @@ public class Bullet2 : MonoBehaviour {
             timer = 0.0f;
             bulletTouchCount++;
 
-            if (bulletTouchCount == 2 && !changedTime) { // bulletTouchCount°¡ 2°¡ µÇ¸é time °ªÀ» º¯°æÇÕ´Ï´Ù.
+            if (bulletTouchCount == 2 && !changedTime) { // bulletTouchCountê°€ 2ê°€ ë˜ë©´ time ê°’ì„ ë³€ê²½í•©ë‹ˆë‹¤.
                 tempTime = time;
                 time = 4.0f;
                 changedTime = true;
                 bulletTouchCount = 0;
             }
-            else if (bulletTouchCount != 2 && changedTime) { // bulletTouchCount°¡ 3ÀÌ µÇ¸é time °ªÀ» ¿ø·¡´ë·Î µ¹¸³´Ï´Ù.
+            else if (bulletTouchCount != 2 && changedTime) { // bulletTouchCountê°€ 3ì´ ë˜ë©´ time ê°’ì„ ì›ë˜ëŒ€ë¡œ ëŒë¦½ë‹ˆë‹¤.
                 time = tempTime;
                 changedTime = false;
             }

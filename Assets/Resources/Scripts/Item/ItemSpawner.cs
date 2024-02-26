@@ -1,14 +1,14 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour
 {
-    //¾ÆÀÌÅÛ ÇÁ¸®ÆÕ Á¾·ù
+    //ì•„ì´í…œ í”„ë¦¬íŒ¹ ì¢…ë¥˜
     [SerializeField]
     List<GameObject> itemPrefabs = new List<GameObject>();
 
-    //¾ÆÀÌÅÛ ½ºÆùÇÒ ¹üÀ§
+    //ì•„ì´í…œ ìŠ¤í°í•  ë²”ìœ„
     [SerializeField]
     float minX = 0;
     [SerializeField]
@@ -35,22 +35,22 @@ public class ItemSpawner : MonoBehaviour
 
     void Update()
     {
-        //°¢ ÇÁ¸®ÆÕ¸¶´Ù
+        //ê° í”„ë¦¬íŒ¹ë§ˆë‹¤
         for(int i = 0; i < itemPrefabs.Count; i++)
         {
 
-            //½ºÆùÇÒ Å¸ÀÓÀÌ¸é
+            //ìŠ¤í°í•  íƒ€ì„ì´ë©´
             if (Mathf.Abs(timeChecker.NowTime - spawnTime[i]) < Time.deltaTime)
             {
-                //°ÔÀÓ ¿ÀºêÁ§Æ® »ı¼º
+                //ê²Œì„ ì˜¤ë¸Œì íŠ¸ ìƒì„±
                 GameObject itemObject = Instantiate(itemPrefabs[i]);
 
-                //·£´ıÇÑ ÁÂÇ¥¿¡ À§Ä¡
+                //ëœë¤í•œ ì¢Œí‘œì— ìœ„ì¹˜
                 float randomX = Random.Range(minX, maxX);
                 float randomY = Random.Range(minY, maxY);
                 itemObject.transform.position = new Vector3(randomX, randomY,0);
 
-                //´ÙÀ½ ½ºÆù ½Ã°£ ¼³Á¤
+                //ë‹¤ìŒ ìŠ¤í° ì‹œê°„ ì„¤ì •
                 Item itemComponent = itemPrefabs[i].GetComponent<Item>();
                 spawnTime[i] += Random.Range(itemComponent.SpawnMinTime, itemComponent.SpawnMaxTime);
             }

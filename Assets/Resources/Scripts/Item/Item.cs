@@ -1,41 +1,41 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    //»ı¼º ÁÖ±â ÃÖ¼Ò
+    //ìƒì„± ì£¼ê¸° ìµœì†Œ
     [SerializeField]
     protected float spawnMinTime = 0f;
     public float SpawnMinTime { get { return spawnMinTime; } }
 
-    //»ı¼º ÁÖ±â ÃÖ´ë
+    //ìƒì„± ì£¼ê¸° ìµœëŒ€
     [SerializeField]
     protected float spawnMaxTime = 0f;
     public float SpawnMaxTime { get { return spawnMaxTime; } }
 
-    //¼Ò¸ê½Ã°£
+    //ì†Œë©¸ì‹œê°„
     [SerializeField]
     protected float destroyTime = 15f;
 
-    //±ôºıÀÌ±â ½ÃÀÛÇÏ´Â ½Ã°£
+    //ê¹œë¹¡ì´ê¸° ì‹œì‘í•˜ëŠ” ì‹œê°„
     [SerializeField]
     protected float blinkStartTime = 10f;
 
-    //±ôºıÀÓ ÁÖ±â/2
+    //ê¹œë¹¡ì„ ì£¼ê¸°/2
     [SerializeField]
     protected float blinkIntervalTime = 0.5f;
 
-    //·»´õ·¯
+    //ë Œë”ëŸ¬
     protected SpriteRenderer spriteRenderer;
 
-    //¾ÆÀÌÅÛ »ı¼ºµÈ ÈÄ ½Ã°£
+    //ì•„ì´í…œ ìƒì„±ëœ í›„ ì‹œê°„
     protected float nowTime = 0f;
 
-    //ÇÃ·¹ÀÌ¾î°¡ ¸Ô¾ú´ÂÁö ¿©ºÎ
+    //í”Œë ˆì´ì–´ê°€ ë¨¹ì—ˆëŠ”ì§€ ì—¬ë¶€
     protected bool eaten = false;
 
-    //±ôºıÀÌ´Â ÁßÀÎÁö ¿©ºÎ
+    //ê¹œë¹¡ì´ëŠ” ì¤‘ì¸ì§€ ì—¬ë¶€
     private bool isBlinking = false;
 
     Color origin = new Color(1, 1, 1, 1);
@@ -46,16 +46,16 @@ public class Item : MonoBehaviour
     {
         nowTime += Time.deltaTime;
 
-        //±ôºıÀÓ ½Ã°£ÀÌ µÇ¸é 
+        //ê¹œë¹¡ì„ ì‹œê°„ì´ ë˜ë©´ 
         if (nowTime > blinkStartTime && !isBlinking)
         {
             StartCoroutine(Blink());
             isBlinking = true;
         }
-        //¾È ¸Ô¾úÀ» ¶§ ¼Ò¸ê ½Ã°£ÀÌ µÇ¸é
+        //ì•ˆ ë¨¹ì—ˆì„ ë•Œ ì†Œë©¸ ì‹œê°„ì´ ë˜ë©´
         else if (nowTime > destroyTime && !eaten)
         {
-            //¾ÆÀÌÅÛ ¼Ò¸ê
+            //ì•„ì´í…œ ì†Œë©¸
             Destroy(this.gameObject);
         }
     }
@@ -64,7 +64,7 @@ public class Item : MonoBehaviour
     {
         while (true)
         {
-            //±ôºıÀÓ Ã³¸® - Åõ¸í<->ºÒÅõ¸í
+            //ê¹œë¹¡ì„ ì²˜ë¦¬ - íˆ¬ëª…<->ë¶ˆíˆ¬ëª…
             spriteRenderer.color = (spriteRenderer.color == origin) ? transparent : origin;
             yield return new WaitForSeconds(blinkIntervalTime);
         }

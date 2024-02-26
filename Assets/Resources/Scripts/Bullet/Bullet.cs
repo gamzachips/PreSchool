@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,51 +6,51 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 8f; // Åº¾Ë ¼Ó·Â
-    private Rigidbody2D bulletRigidbody; // ÀÌµ¿¿¡ »ç¿ëÇÒ ¸®Áöµå¹Ùµğ ÄÄÆ÷³ÍÆ®
-    private Vector2 normal; // Ãæµ¹ ÁöÁ¡ÀÇ ¹ı¼± º¤ÅÍ
-    private bool wallCollision = false; // º®°ú °øÀÇ Ãæµ¹ °¨Áö
+    public float speed = 8f; // íƒ„ì•Œ ì†ë ¥
+    private Rigidbody2D bulletRigidbody; // ì´ë™ì— ì‚¬ìš©í•  ë¦¬ì§€ë“œë°”ë”” ì»´í¬ë„ŒíŠ¸
+    private Vector2 normal; // ì¶©ëŒ ì§€ì ì˜ ë²•ì„  ë²¡í„°
+    private bool wallCollision = false; // ë²½ê³¼ ê³µì˜ ì¶©ëŒ ê°ì§€
     private Vector2 direction;
 
-    public Vector2 startPos; // ÃÑ¾ËÀÌ Ã³À½ »ı¼ºµÇ´Â À§Ä¡
-    public Vector2 targetPos; // ÃÑ¾ËÀÌ ÇâÇÏ´Â ¸ñÀûÁö
+    public Vector2 startPos; // ì´ì•Œì´ ì²˜ìŒ ìƒì„±ë˜ëŠ” ìœ„ì¹˜
+    public Vector2 targetPos; // ì´ì•Œì´ í–¥í•˜ëŠ” ëª©ì ì§€
 
     void Start()
     {
-        // °ÔÀÓ ¿ÀºêÁ§Æ®¿¡¼­ Rigidbody ÄÄÆ÷³ÍÆ®¸¦ Ã£¾Æ bulletRigidbody¿¡ ÇÒ´ç
+        // ê²Œì„ ì˜¤ë¸Œì íŠ¸ì—ì„œ Rigidbody ì»´í¬ë„ŒíŠ¸ë¥¼ ì°¾ì•„ bulletRigidbodyì— í• ë‹¹
         bulletRigidbody = GetComponent<Rigidbody2D>();
        
-        // RigidbodyÀÇ È¸ÀüÀ» Á¦ÇÑ
+        // Rigidbodyì˜ íšŒì „ì„ ì œí•œ
         bulletRigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
         
 
-        // ÃÑ¾ËÀÌ »ı¼ºµÇ´Â À§Ä¡¸¦ startPos·Î ¼³Á¤
+        // ì´ì•Œì´ ìƒì„±ë˜ëŠ” ìœ„ì¹˜ë¥¼ startPosë¡œ ì„¤ì •
         transform.position = startPos;
 
         direction = (targetPos - startPos).normalized;
 
-        // ¸®Áöµå¹ÙµğÀÇ ¼Óµµ = ¾ÕÂÊ ¹æÇâ * ÀÌµ¿ ¼Ó·Â
+        // ë¦¬ì§€ë“œë°”ë””ì˜ ì†ë„ = ì•ìª½ ë°©í–¥ * ì´ë™ ì†ë ¥
         bulletRigidbody.velocity = direction * speed;
     }
 
-    // Ãæµ¹ ½Ã Ãæµ¹µÈ À§Ä¡ °¡Á®¿À´Â ¸Ş¼­µå
+    // ì¶©ëŒ ì‹œ ì¶©ëŒëœ ìœ„ì¹˜ ê°€ì ¸ì˜¤ëŠ” ë©”ì„œë“œ
     void OnCollisionEnter2D(Collision2D col)
     {
         ContactPoint2D contact = col.contacts[0];
 
-        // Ãæµ¹ÁöÁ¡ ¿ÀÂ÷¸¦ ÁÙÀÌ±â À§ÇÑ ¹İ¿Ã¸²
+        // ì¶©ëŒì§€ì  ì˜¤ì°¨ë¥¼ ì¤„ì´ê¸° ìœ„í•œ ë°˜ì˜¬ë¦¼
         float currentPosX = (float)Math.Round(contact.point.x, 1);
         float currentPosY = (float)Math.Round(contact.point.y, 1);
 
-        Vector2 currentPos = new Vector2(currentPosX, currentPosY); // ÇöÀç ÃÑ¾ËÀÇ À§Ä¡
+        Vector2 currentPos = new Vector2(currentPosX, currentPosY); // í˜„ì¬ ì´ì•Œì˜ ìœ„ì¹˜
         normal = contact.normal;
-        direction = Vector2.Reflect((currentPos - startPos).normalized, normal); // ¹İ»ç ¹æÇâ °è»ê
+        direction = Vector2.Reflect((currentPos - startPos).normalized, normal); // ë°˜ì‚¬ ë°©í–¥ ê³„ì‚°
         Debug.Log(currentPos -  startPos);
         startPos = currentPos;
         wallCollision = true;
     }
 
-    // º®¿¡ ºÎµóÇûÀ» ½Ã ¹İ»çµÇ¾î °øÀÌ ³¯¾Æ°¡°Ô ÇÏ´Â ¸Ş¼­µå
+    // ë²½ì— ë¶€ë”›í˜”ì„ ì‹œ ë°˜ì‚¬ë˜ì–´ ê³µì´ ë‚ ì•„ê°€ê²Œ í•˜ëŠ” ë©”ì„œë“œ
     void BulletReflection()
     {
         bulletRigidbody.velocity = direction.normalized * speed;
@@ -58,7 +58,7 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
-        if(wallCollision) // º®¿¡ Ãæµ¹ ½Ã
+        if(wallCollision) // ë²½ì— ì¶©ëŒ ì‹œ
         {
             BulletReflection();
             wallCollision = false;

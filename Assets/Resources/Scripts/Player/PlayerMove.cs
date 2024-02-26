@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,11 +19,11 @@ public class PlayerMove : MonoBehaviour
 
     public float Speed {  get { return speed; } set {  speed = value; } }
 
-    private SpriteRenderer renderer;
+    private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
-      renderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -38,28 +38,28 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(Vector3.up * Time.deltaTime * speed);
-            renderer.sprite = back;
+            spriteRenderer.sprite = back;
         }
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
 
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed);
-            renderer.sprite = left;
-            renderer.flipX = false;
+            spriteRenderer.sprite = left;
+            spriteRenderer.flipX = false;
         }
 
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             transform.Translate(Vector3.right * Time.deltaTime * speed);
-            renderer.sprite = left;
-            renderer.flipX = true;
+            spriteRenderer.sprite = left;
+            spriteRenderer.flipX = true;
         }
 
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             transform.Translate(Vector3.down * Time.deltaTime * speed);
-            renderer.sprite = front;
+            spriteRenderer.sprite = front;
 
         }
     }

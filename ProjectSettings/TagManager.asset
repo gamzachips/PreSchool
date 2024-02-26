@@ -9,13 +9,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Bullet
+  - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - Player
+  - Item
+  - Obstacle
   - 
   - 
   - 
@@ -41,4 +41,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1377864899
+    locked: 0
+  - name: Middleground
+    uniqueID: 294052305
+    locked: 0
+  - name: Foreground
+    uniqueID: 1582038099
+    locked: 0
+  - name: Player
+    uniqueID: 2693581129
+    locked: 0
+  - name: Obstacle
+    uniqueID: 734670523
     locked: 0

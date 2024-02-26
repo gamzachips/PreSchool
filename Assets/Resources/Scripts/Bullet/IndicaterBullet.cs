@@ -1,36 +1,36 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class IndicaterBullet : MonoBehaviour
 {
-    public Vector3[] positions; // °øÀÌ ÀÌµ¿ÇÒ À§Ä¡µé
-    private int currentIndex = 0; // ÇöÀç À§Ä¡ÀÇ ÀÎµ¦½º
-    public float time = 1.0f; // ÀÌµ¿ ½Ã°£
-    private float timer = 0.0f; // ÁÂÇ¥ »çÀÌ¸¦ ÀÌµ¿ÇÏ´Âµ¥ °É¸° ½Ã°£
-    private int roundCount = 0; // ÇÑ ¹ÙÄû µ¹Àº È½¼ö
+    public Vector3[] positions; // ê³µì´ ì´ë™í•  ìœ„ì¹˜ë“¤
+    private int currentIndex = 0; // í˜„ìž¬ ìœ„ì¹˜ì˜ ì¸ë±ìŠ¤
+    public float time = 1.0f; // ì´ë™ ì‹œê°„
+    private float timer = 0.0f; // ì¢Œí‘œ ì‚¬ì´ë¥¼ ì´ë™í•˜ëŠ”ë° ê±¸ë¦° ì‹œê°„
+    private int roundCount = 0; // í•œ ë°”í€´ ëŒì€ íšŸìˆ˜
 
     void Update()
     {
-        // °æ°ú ½Ã°£À» ´©Àû
+        // ê²½ê³¼ ì‹œê°„ì„ ëˆ„ì 
         timer += Time.deltaTime;
 
-        // °øÀÌ ÇöÀç À§Ä¡¿¡¼­ ´ÙÀ½ À§Ä¡·Î ºÎµå·´°Ô ÀÌµ¿
+        // ê³µì´ í˜„ìž¬ ìœ„ì¹˜ì—ì„œ ë‹¤ìŒ ìœ„ì¹˜ë¡œ ë¶€ë“œëŸ½ê²Œ ì´ë™
         transform.position = Vector3.Lerp(positions[currentIndex], positions[(currentIndex + 1) % positions.Length], timer / time);
 
-        // °øÀÌ ´ÙÀ½ À§Ä¡¿¡ µµÂøÇß´ÂÁö °Ë»ç
+        // ê³µì´ ë‹¤ìŒ ìœ„ì¹˜ì— ë„ì°©í–ˆëŠ”ì§€ ê²€ì‚¬
         if (timer >= time)
         {
-            // ´ÙÀ½ À§Ä¡ÀÇ ÀÎµ¦½º¸¦ °è»ê (¸¶Áö¸· À§Ä¡¿¡ µµÂøÇÏ¸é Ã³À½ À§Ä¡·Î µ¹¾Æ°¨)
+            // ë‹¤ìŒ ìœ„ì¹˜ì˜ ì¸ë±ìŠ¤ë¥¼ ê³„ì‚° (ë§ˆì§€ë§‰ ìœ„ì¹˜ì— ë„ì°©í•˜ë©´ ì²˜ìŒ ìœ„ì¹˜ë¡œ ëŒì•„ê°)
             currentIndex = (currentIndex + 1) % positions.Length;
 
-            // °æ°ú ½Ã°£À» ÃÊ±âÈ­
+            // ê²½ê³¼ ì‹œê°„ì„ ì´ˆê¸°í™”
             timer = 0.0f;
 
-            // ¸ðµç À§Ä¡¸¦ ÇÑ ¹ÙÄû µ¹¾Ò´ÂÁö °Ë»ç
+            // ëª¨ë“  ìœ„ì¹˜ë¥¼ í•œ ë°”í€´ ëŒì•˜ëŠ”ì§€ ê²€ì‚¬
             if (currentIndex == 0)
             {
-                roundCount++; // ÇÑ ¹ÙÄû µ¹Àº È½¼ö Áõ°¡
+                roundCount++; // í•œ ë°”í€´ ëŒì€ íšŸìˆ˜ ì¦ê°€
 
-                // ÇÑ ¹ÙÄû µ¹Àº È½¼ö°¡ 1ÀÌ µÇ¸é ¿ÀºêÁ§Æ® ÆÄ±«
+                // í•œ ë°”í€´ ëŒì€ íšŸìˆ˜ê°€ 1ì´ ë˜ë©´ ì˜¤ë¸Œì íŠ¸ íŒŒê´´
                 if (roundCount >= 1)
                 {
                     Destroy(gameObject, 1);

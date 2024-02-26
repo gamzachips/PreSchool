@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,7 +21,7 @@ public class ItemScore: Item
 
         if(collision.gameObject.CompareTag("Player"))
         {
-            //¡°ºˆ ¡ı∞°
+            //Ï†êÏàò Ï¶ùÍ∞Ä
             scoreSystem.AddScore(score);
 
             if(score == 500)
@@ -37,7 +37,7 @@ public class ItemScore: Item
                 scoreSystem.scoreItem1500++;
             }
 
-            //æ∆¿Ã≈€ ªË¡¶
+            //ÏïÑÏù¥ÌÖú ÏÇ≠Ï†ú
             Destroy(this.gameObject);
 
             AudioManager.Instance.PlayItemSound();

@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -30,7 +30,7 @@ public class DefenceItem : Item
         {
             playerlife.playerstate = PlayerState.defence;
             AudioManager.Instance.PlayItemSound();
-            //æ∆¿Ã≈€ ªË¡¶
+            //ÏïÑÏù¥ÌÖú ÏÇ≠Ï†ú
             Destroy(this.gameObject);
         }
     }
