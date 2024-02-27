@@ -33,6 +33,8 @@ public class PlayerMove : MonoBehaviour
 
         Vector3 movedir = new Vector3(h, v, 0).normalized;
 
+        if (gameObject.GetComponent<PlayerLife>().playerstate == PlayerLife.PlayerState.interactive)
+            return;
 
         transform.Translate(movedir * Time.fixedDeltaTime * speed);
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))

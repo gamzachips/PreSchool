@@ -13,10 +13,10 @@ public class PlayerLife : MonoBehaviour
     public int CurLife = 3;
     public SpriteRenderer PlayerIm;
 
-    //?쇨꺽愿??
+    //??④봄?온??
     public float DamageTime = 0;
 
-    //?쇱씠??
+    //??깆뵠??
     [SerializeField]
     public bool[] LifeIdx;
     public Image[] Heart;
@@ -31,7 +31,8 @@ public class PlayerLife : MonoBehaviour
         invincible,
         damage,
         defence,
-        die
+        die,
+        interactive
     };
 
     public PlayerState playerstate = PlayerState.life;
