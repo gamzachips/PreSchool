@@ -92,7 +92,7 @@ public class PlayerLife : MonoBehaviour
             Debug.Log("Die");
             ScoreSystem.Instance.Grade = GradeType.F;
             AudioManager.Instance.MuteMusic();
-            ScneManager.Instance.ChangeMain();
+            ScneManager.Instance.ChangeResult();
         }
         else if (playerstate == PlayerState.invincible && Input.GetKeyDown(KeyCode.L))
         {
