@@ -25,7 +25,6 @@ public class LaserSpawner2 : MonoBehaviour
         for(int i = 0; i < spawnTimings.Length; i++)
         {
             spawnTimings[i].isLaserSpawned = new bool[spawnTimings[i].time.Length];
-
         }
     }
 
@@ -41,7 +40,6 @@ public class LaserSpawner2 : MonoBehaviour
 
                 if (Mathf.Abs(timeChecker.NowTime - timing) < Time.deltaTime)
                 {
-
                     laserObjects[i].SetActive(true);
                     StartCoroutine(DestroyLaser(laserObjects[i]));
                     spawnTimings[i].isLaserSpawned[j] = true;
@@ -49,8 +47,6 @@ public class LaserSpawner2 : MonoBehaviour
             }
         }
     }
-
-
 
     IEnumerator DestroyLaser(GameObject laser)
     {
