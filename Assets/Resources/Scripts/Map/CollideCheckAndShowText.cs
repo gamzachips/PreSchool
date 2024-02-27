@@ -13,12 +13,16 @@ public class CollideCheckAndShowText : MonoBehaviour
     [SerializeField]
     string[] showText;
 
+    [SerializeField]
+    ScneManager.SceneType nextScene = ScneManager.SceneType.None;
+
     int nowIdx = 0;
     TextMeshProUGUI textMesh;
 
     bool isStaying = false;
     bool isInteracting = false;
     GameObject player;
+
 
     private void Start()
     {
@@ -48,6 +52,11 @@ public class CollideCheckAndShowText : MonoBehaviour
                     if (player == null) return;
                     player.gameObject.GetComponent<PlayerLife>().playerstate = PlayerLife.PlayerState.life;
                     nowIdx = 0;
+
+                    if(nextScene != ScneManager.SceneType.None)
+                    {
+                        ScneManager.Instance.ChangeSceneByType(nextScene);
+                    }
                 }
 
             }

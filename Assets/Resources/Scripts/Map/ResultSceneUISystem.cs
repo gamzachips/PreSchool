@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -31,6 +31,7 @@ public class ResultSceneUISystem : MonoBehaviour
 
     void Start()
     {
+        AudioManager.Instance.MuteMusic();
         //게임아웃이면 엔딩버튼 비활성화
         scoreSystem = GameObject.Find("ScoreSystem").GetComponent<ScoreSystem>();
         if(scoreSystem.Grade == GradeType.F)

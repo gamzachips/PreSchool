@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
 {
     //싱글톤
     static AudioManager instance;
-    public static AudioManager Instance { get { Init(); return instance; } }
+    public static AudioManager Instance { get { Init();  return instance; } }
 
     static void Init()
     {
@@ -18,6 +18,7 @@ public class AudioManager : MonoBehaviour
             {
                 go = new GameObject { name = "AudioManager" };
                 go.AddComponent<AudioManager>();
+                
             }
             DontDestroyOnLoad(go);
             instance = go.GetComponent<AudioManager>();
@@ -32,10 +33,15 @@ public class AudioManager : MonoBehaviour
     AudioClip itemSoundClip;
     AudioClip buttonSoundClip;
 
-    private void Start()
+    public void Awake()
     {
         Init();
-        
+        instance.MakeAduioSurce();
+        instance.LoadAudios();
+    }
+
+    private void MakeAduioSurce()
+    {
         //오디오 소스 생성
         musicSource = gameObject.AddComponent<AudioSource>();
         effectSoundSource = gameObject.AddComponent<AudioSource>();
@@ -43,8 +49,6 @@ public class AudioManager : MonoBehaviour
         musicSource.playOnAwake = false;
         effectSoundSource.playOnAwake = false;
         effectSoundSource.volume = 0.5f;
-
-        LoadAudios();
     }
 
     private void LoadAudios()

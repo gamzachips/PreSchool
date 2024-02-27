@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class ScneManager : MonoBehaviour
 {
-    //싱글톤
+    public enum SceneType
+    {
+        None, Menu, Main, StartCutScene, EndingCutScene, Room, Result
+    }
+
+
     static ScneManager instance;
     public static ScneManager Instance { get { Init(); return instance; } }
 
@@ -32,8 +37,8 @@ public class ScneManager : MonoBehaviour
     public void ChangeMain()
     {
         SceneManager.LoadScene("RoopAI");
-         ScoreSystem.Instance.Reset();
-         AudioManager.Instance.PlayGameMusic();
+        ScoreSystem.Instance.Reset();
+        AudioManager.Instance.PlayGameMusic();
     }
 
     public void ChangeCutScene()
@@ -58,6 +63,37 @@ public class ScneManager : MonoBehaviour
     public void ChangeResult()
     {
         SceneManager.LoadScene("ResultScene");
-        AudioManager.Instance.MuteMusic();
+    }
+
+    public void ChangeRoom()
+    {
+        SceneManager.LoadScene("GranpaRoom");
+    }
+
+    public void ChangeSceneByType(SceneType type)
+    {
+        switch(type) 
+        {
+            case SceneType.None:
+                break;
+            case SceneType.Menu:
+                ChangeMenu();
+                break;
+            case SceneType.Main:
+                ChangeMain();
+                break;
+            case SceneType.StartCutScene:
+                ChangeCutScene();
+                break;
+            case SceneType.EndingCutScene:
+                ChangeEnding();
+                break;
+            case SceneType.Result:
+                ChangeResult();
+                break;
+            case SceneType.Room:
+                ChangeRoom();
+                break;
+        }
     }
 }
