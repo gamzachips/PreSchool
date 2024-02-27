@@ -30,9 +30,9 @@ public class LaserSpawner2 : MonoBehaviour
 
     private void Update()
     {
-        for (int i = 0; i < spawnTimings.Length; i++)
+        for (int i = 0; i < spawnTimings.Length; i++) // 레이저 갯수
         {
-            for (int j = 0; j < spawnTimings[i].time.Length; j++)
+            for (int j = 0; j < spawnTimings[i].time.Length; j++) // 레이저 스폰 수
             {
                 float timing = spawnTimings[i].time[j];
 
