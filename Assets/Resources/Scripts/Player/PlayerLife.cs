@@ -13,10 +13,10 @@ public class PlayerLife : MonoBehaviour
     public int CurLife = 3;
     public SpriteRenderer PlayerIm;
 
-    //피격관련
+    //?쇨꺽愿??
     public float DamageTime = 0;
 
-    //라이프
+    //?쇱씠??
     [SerializeField]
     public bool[] LifeIdx;
     public Image[] Heart;
@@ -66,11 +66,10 @@ public class PlayerLife : MonoBehaviour
         {
             DamageEndfunc();
 
-            // 스프라이트 애니메이션 처리
         }
         else if (playerstate == PlayerState.defence)
         {
-            // 스프라이트 애니메이션 처리
+
         }
         else if (playerstate == PlayerState.damage)
         {
@@ -93,7 +92,7 @@ public class PlayerLife : MonoBehaviour
             Debug.Log("Die");
             ScoreSystem.Instance.Grade = GradeType.F;
             AudioManager.Instance.MuteMusic();
-            SceneManager.LoadScene("ResultScene");
+            ScneManager.Instance.ChangeMain();
         }
         else if (playerstate == PlayerState.invincible && Input.GetKeyDown(KeyCode.L))
         {

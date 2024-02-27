@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,9 +16,7 @@ public class ButtonManager : MonoBehaviour
         if(clickCount > maxCount)
         {
             clickCount = 0;
-            SceneManager.LoadScene("RoopAI");
-            ScoreSystem.Instance.Reset();
-            AudioManager.Instance.PlayGameMusic();
+            ScneManager.Instance.ChangeMain();
         }
         else
         {
@@ -30,7 +28,7 @@ public class ButtonManager : MonoBehaviour
         clickCount++;
         if (clickCount > maxCount) {
             clickCount = 0;
-            SceneManager.LoadScene("MenuScene");
+            ScneManager.Instance.ChangeMenu();
         }
         else {
             GameObject.Find("ImageChange").GetComponent<Image>().sprite = sprites[clickCount];

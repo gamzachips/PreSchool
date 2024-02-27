@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -21,9 +21,7 @@ public class scenechange : MonoBehaviour
 
         if(curtime> changetime)
         {
-            ScoreSystem.Instance.Reset();
-            AudioManager.Instance.PlayGameMusic();
-            SceneManager.LoadScene("RoopAI");
+            ScneManager.Instance.ChangeMain();
             
         }
     }
