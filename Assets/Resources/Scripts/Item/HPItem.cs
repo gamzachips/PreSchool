@@ -15,13 +15,6 @@ public class HPItem : Item
     void Start()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
