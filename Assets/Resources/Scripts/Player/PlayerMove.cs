@@ -28,39 +28,33 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        /*float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
 
-        Vector3 moveDir = new Vector3(h, v).normalized;
+        Vector3 movedir = new Vector3(h, v, 0).normalized;
 
 
-        transform.Translate(moveDir * Time.deltaTime * speed);*/
+        transform.Translate(movedir * Time.fixedDeltaTime * speed);
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            transform.Translate(Vector3.up * Time.fixedDeltaTime * speed);
             spriteRenderer.sprite = back;
         }
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-
         {
-            transform.Translate(Vector3.left * Time.fixedDeltaTime * speed);
             spriteRenderer.sprite = left;
             spriteRenderer.flipX = false;
         }
 
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(Vector3.right * Time.fixedDeltaTime * speed);
             spriteRenderer.sprite = left;
             spriteRenderer.flipX = true;
         }
 
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            transform.Translate(Vector3.down * Time.fixedDeltaTime * speed);
             spriteRenderer.sprite = front;
-
         }
     }
 
