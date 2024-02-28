@@ -24,7 +24,7 @@ public class HPItem : Item
         if (collision.gameObject.CompareTag("Player"))
         {
             playerlife = collision.gameObject.GetComponent<PlayerLife>();
-            for (int i = 0; i < playerlife.LifeIdx.Length; i++)
+            for (int i = 4; i >= 0; i--)
             {
                 if (playerlife.LifeIdx[i] == false)
                 {
