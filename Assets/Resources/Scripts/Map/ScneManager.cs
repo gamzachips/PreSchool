@@ -7,7 +7,7 @@ public class ScneManager : MonoBehaviour
 {
     public enum SceneType
     {
-        None, Menu, Main, StartCutScene, EndingCutScene, Room, Result
+        None, Menu, Main, StartCutScene, EndingCutScene, Room, Result, Tutorial
     }
 
 
@@ -70,6 +70,11 @@ public class ScneManager : MonoBehaviour
         SceneManager.LoadScene("GranpaRoom");
     }
 
+    public void ChangeTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+
     public void ChangeSceneByType(SceneType type)
     {
         switch(type) 
@@ -93,6 +98,9 @@ public class ScneManager : MonoBehaviour
                 break;
             case SceneType.Room:
                 ChangeRoom();
+                break;
+            case SceneType.Tutorial:
+                ChangeTutorial();
                 break;
         }
     }

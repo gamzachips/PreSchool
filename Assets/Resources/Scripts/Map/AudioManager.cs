@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    //싱글톤
+    //?깃???
     static AudioManager instance;
     public static AudioManager Instance { get { Init();  return instance; } }
 
@@ -30,6 +30,7 @@ public class AudioManager : MonoBehaviour
 
     AudioClip mainMusicClip;
     AudioClip gameMusicClip;
+    AudioClip tutorialMusicClip;
     AudioClip itemSoundClip;
     AudioClip buttonSoundClip;
 
@@ -42,7 +43,6 @@ public class AudioManager : MonoBehaviour
 
     private void MakeAduioSurce()
     {
-        //오디오 소스 생성
         musicSource = gameObject.AddComponent<AudioSource>();
         effectSoundSource = gameObject.AddComponent<AudioSource>();
 
@@ -57,6 +57,7 @@ public class AudioManager : MonoBehaviour
         gameMusicClip = Resources.Load<AudioClip>("Audios/Game2");
         itemSoundClip = Resources.Load<AudioClip>("Audios/ItemPickUp");
         buttonSoundClip = Resources.Load<AudioClip>("Audios/ButtonClick");
+        tutorialMusicClip = Resources.Load<AudioClip>("Audios/Tutorial");
     }
 
     public void PlayMainMusic()
@@ -68,6 +69,14 @@ public class AudioManager : MonoBehaviour
     public void PlayGameMusic()
     {
         musicSource.clip = gameMusicClip;
+        musicSource.mute = false;
+        musicSource.loop = false;
+        musicSource.Play();
+    }
+
+    public void PlayTutorialMusic()
+    {
+        musicSource.clip = tutorialMusicClip;
         musicSource.mute = false;
         musicSource.loop = false;
         musicSource.Play();
@@ -90,4 +99,13 @@ public class AudioManager : MonoBehaviour
         effectSoundSource.Play();
     }
 
+    public void PauseMusic()
+    {
+        musicSource.Pause();
+    }
+
+    public void ContinueMusic()
+    {
+        musicSource.Play();
+    }
 }

@@ -12,11 +12,10 @@ public class SetGradeImage : MonoBehaviour
 
     private void Start()
     {
-        scoreSystem = GameObject.Find("ScoreSystem").GetComponent<ScoreSystem>();   
     }
 
     private void Update()
     {
-        gameObject.GetComponent<Image>().sprite = gradeSprites[(int)scoreSystem.Grade];
+        gameObject.GetComponent<Image>().sprite = gradeSprites[(int)ScoreSystem.Instance.Grade];
     }
 }
