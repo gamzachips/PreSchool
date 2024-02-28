@@ -42,6 +42,7 @@ public class TutorialSystem : MonoBehaviour
         isShowing = true;
 
         itemObjects = new GameObject[itemPrefabs.Length];
+        AudioManager.Instance.PlayTutorialMusic();
     }
 
     private void Update()
@@ -80,7 +81,7 @@ public class TutorialSystem : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Z) || (Input.GetKeyDown(KeyCode.Return)))
             {
                 HideText();
-                AudioManager.Instance.PlayTutorialMusic();
+                // AudioManager.Instance.PlayTutorialMusic();
             }
 
 
