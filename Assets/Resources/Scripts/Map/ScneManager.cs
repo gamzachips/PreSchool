@@ -73,6 +73,7 @@ public class ScneManager : MonoBehaviour
 
     public void ChangeTutorial()
     {
+        ScoreSystem.Instance.Reset();
         SceneManager.LoadScene("Tutorial");
     }
 
