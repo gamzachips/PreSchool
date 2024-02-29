@@ -12,7 +12,7 @@ public class TimeChecker : MonoBehaviour
     public ScneManager.SceneType nowStage = ScneManager.SceneType.None;
 
     float nowTime = 0f;
-    public float NowTime { get { return nowTime; } }
+    public float NowTime { get { return nowTime; } set { nowTime = value; } }
     void Start()
     {
         nowTime = 0f;
