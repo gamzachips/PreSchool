@@ -538,6 +538,52 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &209864715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 209864717}
+  - component: {fileID: 209864716}
+  m_Layer: 0
+  m_Name: RoomSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &209864716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209864715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2e0b66465cec14419096ef37763edde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  computerCollider: {fileID: 1307981366}
+  computerMusicAnimation: {fileID: 266875401}
+--- !u!4 &209864717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209864715}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.15185633, y: 0.6613091, z: 1.0475134}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &266875401
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,7 +600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &266875402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2062,6 +2108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1307981367}
   - component: {fileID: 1307981368}
+  - component: {fileID: 1307981369}
   m_Layer: 0
   m_Name: Keyboard
   m_TagString: Untagged
@@ -2129,6 +2176,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1307981369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307981366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c5634eb3849474e8b5018f8f375a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1720050449}
+  showText:
+  - "\uADF8\uB79C\uD30C\uAC00 \uC544\uB07C\uB358 \uD134\uD14C\uC774\uBE14\uC774\uB2E4."
+  - "\uADF8\uB79C\uD30C\uC758 \uAE30\uC5B5\uC744 \uD655\uC778\uD560 \uC218 \uC788\uC744
+    \uAC83 \uAC19\uB2E4."
+  - "\uD134\uD14C\uC774\uBE14\uC5D0 \uB2F4\uAE34 \uAE30\uC5B5\uC744 \uB2E4\uC2DC
+    \uD655\uC778\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+  nextScene: 2
+  stageConnected: 1
+  stageConnectIdx: 2
 --- !u!1 &1409087440
 GameObject:
   m_ObjectHideFlags: 0
@@ -3057,3 +3126,4 @@ SceneRoots:
   - {fileID: 1038455379}
   - {fileID: 2085043672}
   - {fileID: 266875403}
+  - {fileID: 209864717}
