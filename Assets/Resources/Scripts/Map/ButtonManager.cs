@@ -17,6 +17,7 @@ public class ButtonManager : MonoBehaviour
         {
             clickCount = 0;
             ScneManager.Instance.ChangeRoom();
+            SaveManager.Instance.Reset();
         }
         else
         {

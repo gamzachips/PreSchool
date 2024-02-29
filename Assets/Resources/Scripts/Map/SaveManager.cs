@@ -54,4 +54,10 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.SetInt("Score" + type.ToString(), score);
     }
 
+    public void Reset()
+    {
+        PlayerPrefs.SetInt("Played" + ScneManager.SceneType.Main.ToString(), 0);
+        PlayerPrefs.SetInt("Played" + ScneManager.SceneType.Tutorial.ToString(), 0);
+
+    }
 }
