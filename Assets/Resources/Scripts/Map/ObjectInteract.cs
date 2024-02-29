@@ -53,7 +53,8 @@ public class ObjectInteract : MonoBehaviour
                 int score;
                 //기존에 상호작용중이 아니고 스테이지를 플레이했었다면
                 if(SaveManager.Instance.GetRankAndScore(nextScene, out rank, out score)
-                    && player.GetComponent<PlayerLife>().playerstate != PlayerLife.PlayerState.interactive)
+                    && player.GetComponent<PlayerLife>().playerstate != PlayerLife.PlayerState.interactive
+                     && rank != 'F')
                 {
                     //바로 스테이지 텍스트
                     nowIdx = stageConnectIdx;

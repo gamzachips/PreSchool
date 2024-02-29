@@ -106,7 +106,7 @@ public class PlayerLife : MonoBehaviour
         {
             DamageTime += Time.deltaTime;
 
-            if (DamageTime > 3f)
+            if (DamageTime > 1f)
             {
                 playerstate = PlayerState.life;
             }

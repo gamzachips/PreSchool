@@ -16,14 +16,21 @@ public class RoomMapSystem : MonoBehaviour
         int score;
         if(SaveManager.Instance.GetRankAndScore(ScneManager.SceneType.Tutorial, out rank, out score))
         {
-            computerMusicAnimation.SetActive(true);
-            computerCollider.SetActive(true);
+            if (rank != 'F')
+            {
+                computerMusicAnimation.SetActive(true);
+                computerCollider.SetActive(true);
+            }
+            else
+            {
+                computerMusicAnimation.SetActive(false);
+                computerCollider.SetActive(false);
+            }
         }
         else
         {
             computerMusicAnimation.SetActive(false);
             computerCollider.SetActive(false);
-
         }
     }
 
