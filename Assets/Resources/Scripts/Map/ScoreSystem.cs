@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
@@ -29,8 +29,6 @@ public class ScoreSystem : MonoBehaviour
             instance = go.GetComponent<ScoreSystem>();
         }
     }
-
-
 
     [SerializeField]
     int maxScore = 33000;
@@ -87,7 +85,6 @@ public class ScoreSystem : MonoBehaviour
                 grade = GradeType.F;
             }
         }
-
     }
 
     public void Reset()
@@ -97,5 +94,10 @@ public class ScoreSystem : MonoBehaviour
         scoreItem1500 = 0;
         score = 0;
         grade = GradeType.C;
+    }
+
+    public void SaveRankAndScore(ScneManager.SceneType type)
+    {
+        SaveManager.Instance.SetRankAndScore(type, grade.ToString()[0], score);
     }
 }

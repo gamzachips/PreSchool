@@ -64,6 +64,7 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.clip = mainMusicClip;
         musicSource.loop = true;
+        musicSource.mute = false;
         musicSource.Play();
     }
     public void PlayGameMusic()

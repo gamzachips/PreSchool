@@ -302,7 +302,11 @@ MonoBehaviour:
   - "\uADF8\uB79C\uD30C\uAC00 \uC544\uB07C\uB358 \uD134\uD14C\uC774\uBE14\uC774\uB2E4."
   - "\uADF8\uB79C\uD30C\uC758 \uAE30\uC5B5\uC744 \uD655\uC778\uD560 \uC218 \uC788\uC744
     \uAC83 \uAC19\uB2E4."
+  - "\uD134\uD14C\uC774\uBE14\uC5D0 \uB2F4\uAE34 \uAE30\uC5B5\uC744 \uB2E4\uC2DC
+    \uD655\uC778\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
   nextScene: 7
+  stageConnected: 1
+  stageConnectIdx: 2
 --- !u!1 &139151892
 GameObject:
   m_ObjectHideFlags: 0
@@ -3035,7 +3039,11 @@ MonoBehaviour:
   - "\uADF8\uB79C\uD30C\uAC00 \uC544\uB07C\uB358 \uD134\uD14C\uC774\uBE14\uC774\uB2E4."
   - "\uADF8\uB79C\uD30C\uC758 \uAE30\uC5B5\uC744 \uD655\uC778\uD560 \uC218 \uC788\uC744
     \uAC83 \uAC19\uB2E4."
+  - "\uD134\uD14C\uC774\uBE14\uC5D0 \uB2F4\uAE34 \uAE30\uC5B5\uC744 \uB2E4\uC2DC
+    \uD655\uC778\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
   nextScene: 7
+  stageConnected: 1
+  stageConnectIdx: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
