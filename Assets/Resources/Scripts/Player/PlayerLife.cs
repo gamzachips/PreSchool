@@ -32,7 +32,8 @@ public class PlayerLife : MonoBehaviour
         damage,
         defence,
         die,
-        interactive
+        interactive,
+        afterDefence
     };
 
     public PlayerState playerstate = PlayerState.life;
@@ -101,6 +102,15 @@ public class PlayerLife : MonoBehaviour
         {
             playerstate = PlayerState.life;
         }
+        else if (playerstate == PlayerState.afterDefence)
+        {
+            DamageTime += Time.deltaTime;
+
+            if (DamageTime > 3f)
+            {
+                playerstate = PlayerState.life;
+            }
+        }
     }
 
 
@@ -140,7 +150,7 @@ public class PlayerLife : MonoBehaviour
 
         else if (playerstate == PlayerState.defence)
         {
-            playerstate = PlayerState.life;
+            playerstate = PlayerState.afterDefence;
             gameObject.GetComponentInChildren<Transform>().GetChild(0).gameObject.SetActive(false);
         }
     }
