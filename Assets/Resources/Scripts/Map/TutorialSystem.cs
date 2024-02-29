@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class TutorialSystem : MonoBehaviour
 {
+    [SerializeField] GameObject[] laserSpawners;
+    [SerializeField] GameObject itemSpawner;
+
     [SerializeField] float minX;
     [SerializeField] float maxX;
     [SerializeField] float minY;
@@ -42,7 +45,6 @@ public class TutorialSystem : MonoBehaviour
         isShowing = true;
 
         itemObjects = new GameObject[itemPrefabs.Length];
-        // AudioManager.Instance.PlayTutorialMusic();
     }
 
     private void Update()
@@ -82,6 +84,15 @@ public class TutorialSystem : MonoBehaviour
             {
                 HideText();
                 AudioManager.Instance.PlayTutorialMusic();
+
+                GameObject.Find("TimeChecker").GetComponent<TimeChecker>().NowTime = 0;
+
+                itemSpawner.SetActive(true);
+
+                foreach (GameObject laser in laserSpawners)
+                {
+                    laser.SetActive(true);
+                }
             }
 
 
