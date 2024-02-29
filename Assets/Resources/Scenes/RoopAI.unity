@@ -784,7 +784,6 @@ MonoBehaviour:
   spawnTimings:
   - time:
     - 18
-    - 22
     - 26
     - 30
     - 34
@@ -796,7 +795,6 @@ MonoBehaviour:
     isLaserSpawned: 
   - time:
     - 18.25
-    - 22.25
     - 26.25
     - 30.25
     - 34.25
@@ -808,7 +806,6 @@ MonoBehaviour:
     isLaserSpawned: 
   - time:
     - 18.5
-    - 22.5
     - 26.5
     - 30.5
     - 34.5
@@ -820,7 +817,6 @@ MonoBehaviour:
     isLaserSpawned: 
   - time:
     - 18.75
-    - 22.75
     - 26.75
     - 30.75
     - 34.75
@@ -832,7 +828,6 @@ MonoBehaviour:
     isLaserSpawned: 
   - time:
     - 17
-    - 21
     - 25
     - 29
     - 33
@@ -844,7 +839,6 @@ MonoBehaviour:
     isLaserSpawned: 
   - time:
     - 17.25
-    - 21.25
     - 25.25
     - 29.25
     - 33.25
@@ -856,7 +850,6 @@ MonoBehaviour:
     isLaserSpawned: 
   - time:
     - 17.5
-    - 21.5
     - 25.5
     - 29.5
     - 33.5
@@ -868,7 +861,6 @@ MonoBehaviour:
     isLaserSpawned: 
   - time:
     - 17.75
-    - 21.75
     - 25.75
     - 29.75
     - 33.75
@@ -1589,7 +1581,7 @@ MonoBehaviour:
   - {fileID: 1344551134}
   spawnTimings:
   - time:
-    - 21
+    - 24
     - 25
     - 29
     - 33
@@ -5478,8 +5470,8 @@ MonoBehaviour:
   - {fileID: 662625358}
   spawnTimings:
   - time:
-    - 19
-    - 23
+    - 20
+    - 28
     - 27
     - 31
     - 35
@@ -5491,7 +5483,7 @@ MonoBehaviour:
     isLaserSpawned: 
   - time:
     - 19.25
-    - 23.25
+    - 28.25
     - 27.25
     - 31.25
     - 35.25
@@ -5503,7 +5495,7 @@ MonoBehaviour:
     isLaserSpawned: 
   - time:
     - 19.5
-    - 23.5
+    - 28.5
     - 27.5
     - 31.5
     - 35.5
@@ -5515,7 +5507,7 @@ MonoBehaviour:
     isLaserSpawned: 
   - time:
     - 19.75
-    - 23.75
+    - 28.75
     - 27.75
     - 31.75
     - 35.75
@@ -5527,7 +5519,7 @@ MonoBehaviour:
     isLaserSpawned: 
   - time:
     - 18
-    - 22
+    - 27
     - 26
     - 30
     - 34
@@ -5539,7 +5531,7 @@ MonoBehaviour:
     isLaserSpawned: 
   - time:
     - 18.25
-    - 22.25
+    - 27.25
     - 26.25
     - 30.25
     - 34.25
@@ -5551,7 +5543,7 @@ MonoBehaviour:
     isLaserSpawned: 
   - time:
     - 18.5
-    - 22.5
+    - 27.5
     - 26.5
     - 30.5
     - 34.5
@@ -5563,7 +5555,7 @@ MonoBehaviour:
     isLaserSpawned: 
   - time:
     - 18.75
-    - 22.75
+    - 27.75
     - 26.75
     - 30.75
     - 34.75
@@ -6337,7 +6329,7 @@ MonoBehaviour:
   - {fileID: 404669011}
   spawnTimings:
   - time:
-    - 20
+    - 22
     - 24
     - 28
     - 32
