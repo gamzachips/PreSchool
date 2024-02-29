@@ -5,7 +5,6 @@ using UnityEngine;
 public class BulletCollisionTest : MonoBehaviour
 {
     public GameObject layserObj;
-    SpriteRenderer sRender;
     public float LayserCount;
     public Sprite[] newSprite;
 
