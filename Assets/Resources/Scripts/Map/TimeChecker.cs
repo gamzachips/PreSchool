@@ -9,7 +9,7 @@ public class TimeChecker : MonoBehaviour
     float totalTime = 97f;
 
     [SerializeField]
-    ScneManager.SceneType nowStage = ScneManager.SceneType.None;
+    public ScneManager.SceneType nowStage = ScneManager.SceneType.None;
 
     float nowTime = 0f;
     public float NowTime { get { return nowTime; } }
