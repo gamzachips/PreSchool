@@ -48,7 +48,7 @@ public class AudioManager : MonoBehaviour
 
         musicSource.playOnAwake = false;
         effectSoundSource.playOnAwake = false;
-        effectSoundSource.volume = 0.5f;
+        effectSoundSource.volume = 0.2f;
     }
 
     private void LoadAudios()
