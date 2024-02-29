@@ -92,6 +92,8 @@ public class PlayerLife : MonoBehaviour
         {
             Debug.Log("Die");
             ScoreSystem.Instance.Grade = GradeType.F;
+            ScoreSystem.Instance.SaveRankAndScore(GameObject.Find("TimeChecker").GetComponent<TimeChecker>().nowStage); ;
+
             AudioManager.Instance.MuteMusic();
             ScneManager.Instance.ChangeResult();
         }

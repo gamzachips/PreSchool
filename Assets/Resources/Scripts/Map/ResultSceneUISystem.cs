@@ -19,9 +19,6 @@ public class ResultSceneUISystem : MonoBehaviour
     Image rankImage;
 
     [SerializeField]
-    Button endingButton;
-
-    [SerializeField]
     TextMeshProUGUI rankOrGameover;
 
     ScoreSystem scoreSystem;
@@ -32,16 +29,14 @@ public class ResultSceneUISystem : MonoBehaviour
     void Start()
     {
         AudioManager.Instance.MuteMusic();
-        //게임아웃이면 엔딩버튼 비활성화
+
         scoreSystem = GameObject.Find("ScoreSystem").GetComponent<ScoreSystem>();
         if(scoreSystem.Grade == GradeType.F)
         {
-            endingButton.gameObject.SetActive(false);
             rankOrGameover.SetText("Game Over...");
         }
         else
         {
-            endingButton.gameObject.SetActive(true);
             rankOrGameover.SetText("Rank");
         }
 

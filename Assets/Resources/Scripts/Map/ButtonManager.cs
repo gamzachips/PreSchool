@@ -16,7 +16,8 @@ public class ButtonManager : MonoBehaviour
         if(clickCount > maxCount)
         {
             clickCount = 0;
-            ScneManager.Instance.ChangeMain();
+            ScneManager.Instance.ChangeRoom();
+            SaveManager.Instance.Reset();
         }
         else
         {
