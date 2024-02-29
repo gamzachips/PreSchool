@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class PlayerLife : MonoBehaviour
 {
-    public int MaxLife = 5;
+    public int MaxLife = 3;
     public int CurLife = 3;
     public SpriteRenderer PlayerIm;
 
@@ -40,11 +40,11 @@ public class PlayerLife : MonoBehaviour
 
     void Start()
     {
-        LifeIdx = new bool[5];
+        LifeIdx = new bool[3];
         PlayerIm = GetComponent<SpriteRenderer>();
         PlayerOriginalColor = PlayerIm.color;
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 3; i++)
         {
             LifeIdx[i] = true;
         }
@@ -122,7 +122,7 @@ public class PlayerLife : MonoBehaviour
     }
     public void IsLife()
     {
-        if (LifeIdx[4] == false)
+        if (LifeIdx[2] == false)
         {
             playerstate = PlayerState.die;
         }
@@ -134,7 +134,7 @@ public class PlayerLife : MonoBehaviour
         if ((playerstate == PlayerState.life)
             )
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 3; i++)
             {
                 if (LifeIdx[i] == true)
                 {

@@ -18,9 +18,6 @@ public class ResultSceneUISystem : MonoBehaviour
     [SerializeField]
     Image rankImage;
 
-    [SerializeField]
-    TextMeshProUGUI rankOrGameover;
-
     ScoreSystem scoreSystem;
 
     [SerializeField]
@@ -31,14 +28,6 @@ public class ResultSceneUISystem : MonoBehaviour
         AudioManager.Instance.MuteMusic();
 
         scoreSystem = GameObject.Find("ScoreSystem").GetComponent<ScoreSystem>();
-        if(scoreSystem.Grade == GradeType.F)
-        {
-            rankOrGameover.SetText("Game Over...");
-        }
-        else
-        {
-            rankOrGameover.SetText("Rank");
-        }
 
         totalScore.SetText(scoreSystem.Score.ToString());
         score500.SetText(scoreSystem.scoreItem500.ToString());
