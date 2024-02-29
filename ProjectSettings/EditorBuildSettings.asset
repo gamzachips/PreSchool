@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Resources/Scenes/Tutorial.unity
     guid: 2794b0155fd918c438a03c1972c37434
+  - enabled: 1
+    path: Assets/Resources/Scenes/GranpaRoom.unity
+    guid: 84f62ec6516785e42ba508dfedec2b1c
   m_configObjects: {}
