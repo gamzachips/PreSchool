@@ -77,6 +77,13 @@ public class ScneManager : MonoBehaviour
         SceneManager.LoadScene("Tutorial");
     }
 
+    public void EndGame() {
+        Application.Quit();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+    }
+
     public void ChangeSceneByType(SceneType type)
     {
         switch(type) 
