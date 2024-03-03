@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class HelpButtonManager : MonoBehaviour {
     public GameObject[] gameObject;
-    private int count = 1;
 
     void Update() {
         // 아무 방향키나 눌렀을 때
