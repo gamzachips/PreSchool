@@ -31,7 +31,7 @@ public class ObjectInteract : MonoBehaviour
     TextMeshProUGUI textMesh;
 
     bool isStaying = false;
-    bool isInteracting = false;
+    public bool isInteracting = false;
     GameObject player;
 
     private void Start()
@@ -41,11 +41,14 @@ public class ObjectInteract : MonoBehaviour
 
     private void Update()
     {
-      
+        
+        Debug.Log("isStaying : " + isStaying);
+        Debug.Log("isInteracting : " + isInteracting);
         if (isStaying)
         {
             if (Input.GetKeyDown(KeyCode.Z) || (Input.GetKeyDown(KeyCode.Return)))
             {
+                isInteracting = true;
                 int finalIdx = showText.Length - 1;
                 if (stageConnected) finalIdx = stageConnectIdx - 1;
 
@@ -92,8 +95,9 @@ public class ObjectInteract : MonoBehaviour
             }
         }
        
-        if (Input.GetKey(KeyCode.Escape) && isInteracting)
+        if (Input.GetKeyDown(KeyCode.Escape) && isInteracting)
         {
+            Debug.Log("Check ESC");
             panel.SetActive(false);
             isInteracting = false;
         }
