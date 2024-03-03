@@ -13,7 +13,7 @@ public class ESCButtonControl : MonoBehaviour {
 
     void Update() {
         // 위 방향키를 눌렀을 때
-        if (Input.GetKeyDown(KeyCode.UpArrow)) {
+        if (Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
             greenButton[count].SetActive(false);
             if(count != 0)
                 count--;
@@ -21,9 +21,9 @@ public class ESCButtonControl : MonoBehaviour {
         }
 
         // 아래 방향키를 눌렀을 때
-        if (Input.GetKeyDown(KeyCode.DownArrow)) {
+        if (Input.GetKey(KeyCode.D) || Input.GetKeyDown(KeyCode.DownArrow)) {
             greenButton[count].SetActive(false);
-            if(0 <= count && count < 2)
+            if(0 <= count && count < 1)
                 count++;
             greenButton[count].SetActive(true);
         }
@@ -32,11 +32,13 @@ public class ESCButtonControl : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z)) {
             // 돌아가기 버튼이 활성화되어 있을 때
             if (greenButton[0].activeSelf) {
+                count = 0;
                 gamePause.Resume();
             }
 
             // EndButton이 활성화되어 있을 때 게임 종료
             if (greenButton[1].activeSelf) {
+                count = 0;
                 gamePause.Resume();
                 SceneManager.LoadScene("MenuScene");
             }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build;
 using UnityEngine;
 //using UnityEngine.SceneManagement;
 
@@ -8,12 +9,15 @@ public class GamePause : MonoBehaviour {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuCanvas;
     private ObjectInteract objectInteract;
+    bool Interacting = false;
 
     private void Start() {
         objectInteract = GameObject.FindObjectOfType<ObjectInteract>();
+        
     }
     void Update() {
-        if (!objectInteract.isInteracting && Input.GetKeyDown(KeyCode.Escape)) {
+        Interacting = objectInteract.isInteracting;
+        if (!Interacting && Input.GetKeyDown(KeyCode.Escape)) {
             if (GameIsPaused) {
                 Resume();
             }
