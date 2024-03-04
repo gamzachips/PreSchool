@@ -3,7 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class ResultButtonControl : MonoBehaviour {
     public GameObject[] greenButton;
-    private int count = 1;
+    private int count = 0;
+
+    private void Start()
+    {
+         greenButton[count].SetActive(true);
+    }
+
 
     void Update() {
         // 위 방향키나 w를 눌렀을 때
@@ -24,8 +30,14 @@ public class ResultButtonControl : MonoBehaviour {
 
         // 엔터나 z키를 눌렀을 때
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z)) {
-            ScneManager.Instance.ChangeSceneByType(GameObject.Find("ScoreSystem").GetComponent<ScoreSystem>().sceneType);
+            // StartButton이 활성화되어 있을 때 CutScene으로 이동
+            if (greenButton[0].activeSelf) {
+                ScneManager.Instance.ChangeSceneByType(GameObject.Find("ScoreSystem").GetComponent<ScoreSystem>().sceneType);
+            }
 
+            if (greenButton[1].activeSelf) {
+                SceneManager.LoadScene("GranpaRoom");
+            }
         }
     }
 }

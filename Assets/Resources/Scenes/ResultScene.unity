@@ -546,9 +546,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 362591540}
-        m_TargetAssemblyTypeName: RetryButton, Assembly-CSharp
-        m_MethodName: RetryButtonClick
+      - m_Target: {fileID: 484046613}
+        m_TargetAssemblyTypeName: ScneManager, Assembly-CSharp
+        m_MethodName: ChangeRoom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -830,7 +830,6 @@ GameObject:
   - component: {fileID: 883037085}
   - component: {fileID: 883037084}
   - component: {fileID: 883037083}
-  - component: {fileID: 883037086}
   m_Layer: 5
   m_Name: RetryButton_pink
   m_TagString: Untagged
@@ -951,18 +950,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883037081}
   m_CullTransparentMesh: 1
---- !u!114 &883037086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883037081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c4ac46fda56c5e4aad288641d90f3d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &899028703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2598,9 +2585,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 362591540}
-        m_TargetAssemblyTypeName: RetryButton, Assembly-CSharp
-        m_MethodName: RetryButtonClick
+      - m_Target: {fileID: 484046613}
+        m_TargetAssemblyTypeName: ScneManager, Assembly-CSharp
+        m_MethodName: ChangeRoom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
