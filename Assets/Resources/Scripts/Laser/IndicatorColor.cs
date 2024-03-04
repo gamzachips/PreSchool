@@ -25,7 +25,7 @@ public class IndicatorColor : MonoBehaviour
             elapsedTime += Time.deltaTime;
 
             // 현재 알파 값 계산
-            float currentAlpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeInTime);
+            float currentAlpha = Mathf.Lerp(0f, 0.7f, elapsedTime / fadeInTime);
 
             // 스프라이트 렌더러의 알파 값 설정
             Color newColor = spriteRenderer.color;
