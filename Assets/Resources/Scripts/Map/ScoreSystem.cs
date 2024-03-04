@@ -15,6 +15,7 @@ public class ScoreSystem : MonoBehaviour
     static ScoreSystem instance;
     public static ScoreSystem Instance { get { Init(); return instance; } }
 
+    public ScneManager.SceneType sceneType;
     static void Init()
     {
         if(instance == null)
@@ -83,6 +84,7 @@ public class ScoreSystem : MonoBehaviour
             if (player.GetComponent<PlayerLife>().playerstate == PlayerLife.PlayerState.die)
             {
                 grade = GradeType.F;
+                sceneType = GameObject.Find("TimeChecker").GetComponent<TimeChecker>().nowStage;
             }
         }
     }
