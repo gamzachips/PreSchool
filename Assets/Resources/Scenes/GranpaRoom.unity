@@ -299,15 +299,111 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 1720050449}
   showText:
-  - "\uADF8\uB79C\uD30C\uAC00 \uC544\uB07C\uB358 \uD134\uD14C\uC774\uBE14\uC774\uB2E4."
-  - "\uADF8\uB79C\uD30C\uC758 \uAE30\uC5B5\uC744 \uD655\uC778\uD560 \uC218 \uC788\uC744
-    \uAC83 \uAC19\uB2E4."
-  - "\uD134\uD14C\uC774\uBE14\uC5D0 \uB2F4\uAE34 \uAE30\uC5B5\uC744 \uB2E4\uC2DC
-    \uD655\uC778\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+  - "[\uADF8\uB79C\uD30C\uAC00 \uC544\uB07C\uB358 \uD134\uD14C\uC774\uBE14]"
+  - "\uD55C \uBC88 \uC5F0\uACB0\uD574\uBCFC\uAE4C?"
+  - "\uD134\uD14C\uC774\uBE14\uC5D0 \uB2E4\uC2DC \uC5F0\uACB0\uD574\uBCFC\uAE4C?"
   nextScene: 7
   stageConnected: 1
   stageConnectIdx: 2
   isInteracting: 0
+--- !u!1 &95030597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 95030598}
+  - component: {fileID: 95030600}
+  - component: {fileID: 95030599}
+  m_Layer: 0
+  m_Name: Vase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &95030598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95030597}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.55, y: -0.5, z: 0}
+  m_LocalScale: {x: 1.3827373, y: 1.5625, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1409087441}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &95030599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95030597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c5634eb3849474e8b5018f8f375a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1720050449}
+  showText:
+  - "[\uC870\uD654\uAC00 \uAF42\uD78C \uAF43\uBCD1]"
+  - "\uC640! \uC608\uC058\uB2E4!"
+  nextScene: 0
+  stageConnected: 0
+  stageConnectIdx: 0
+  isInteracting: 0
+--- !u!61 &95030600
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95030597}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &105309353
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 152629248}
   - component: {fileID: 152629249}
+  - component: {fileID: 152629250}
   m_Layer: 0
   m_Name: Bookshelf2
   m_TagString: Untagged
@@ -671,6 +768,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &152629250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152629247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c5634eb3849474e8b5018f8f375a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1720050449}
+  showText:
+  - "\uBB50\uB77C\uACE0 \uC801\uD600\uC788\uB294\uC9C0 \uD558\uB098\uB3C4 \uBAA8\uB974\uACA0\uC5B4"
+  - "[\uB8E8\uD504 \uC2A4\uD14C\uC774\uC158 \uC124\uBA85\uC11C]"
+  - "\uBC18\uBCF5 \uC7AC\uC0DD\uB418\uB294 \uC18C\uB9AC\uB97C \uC313\uC544 \uC74C\uC545\uC744
+    \uB9CC\uB4E4 \uC218 \uC788\uB2E4?"
+  - "\uC544\uD558! \uADF8\uB79C\uD30C\uC758 \uC545\uAE30\uB4E4\uC740 \uC804\uB958\uAC00
+    \uADDC\uCE59\uC801\uC73C\uB85C \uD758\uB800\uC5C8\uC9C0."
+  - "\uADF8\uB7FC... \uBD88\uADDC\uCE59\uC801\uC778 \uC545\uAE30\uB3C4 \uC788\uB098?"
+  nextScene: 0
+  stageConnected: 0
+  stageConnectIdx: 0
+  isInteracting: 0
 --- !u!1 &183311532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,6 +1958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 664661996}
   - component: {fileID: 664661997}
+  - component: {fileID: 664661998}
   m_Layer: 0
   m_Name: Bookshelf1
   m_TagString: Untagged
@@ -1903,6 +2026,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &664661998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664661995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c5634eb3849474e8b5018f8f375a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1720050449}
+  showText:
+  - "\uBB50\uB77C\uACE0 \uC801\uD600\uC788\uB294\uC9C0 \uD558\uB098\uB3C4 \uBAA8\uB974\uACA0\uC5B4"
+  - "[\uB8E8\uD504 \uC2A4\uD14C\uC774\uC158 \uC124\uBA85\uC11C]"
+  - "\uBC18\uBCF5 \uC7AC\uC0DD\uB418\uB294 \uC18C\uB9AC\uB97C \uC313\uC544 \uC74C\uC545\uC744
+    \uB9CC\uB4E4 \uC218 \uC788\uB2E4?"
+  - "\uC544\uD558! \uADF8\uB79C\uD30C\uC758 \uC545\uAE30\uB4E4\uC740 \uC804\uB958\uAC00
+    \uADDC\uCE59\uC801\uC73C\uB85C \uD758\uB800\uC5C8\uC9C0."
+  - "\uADF8\uB7FC... \uBD88\uADDC\uCE59\uC801\uC778 \uC545\uAE30\uB3C4 \uC788\uB098?"
+  nextScene: 0
+  stageConnected: 0
+  stageConnectIdx: 0
+  isInteracting: 0
 --- !u!1 &708369602
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,6 +2237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 925464056}
   - component: {fileID: 925464057}
+  - component: {fileID: 925464058}
   m_Layer: 0
   m_Name: Note1
   m_TagString: Untagged
@@ -2156,6 +2305,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &925464058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925464055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c5634eb3849474e8b5018f8f375a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1720050449}
+  showText:
+  - "[\uC5F0\uAD6C\uC77C\uC9C0 #1]"
+  - "\uC774\uBC88\uC5D0\uB3C4 \uC2E4\uD328\uD588\uB2E4."
+  - "\uB85C\uBD07\uB4E4\uC740 \uC18C\uB9AC\uC640 \uC74C\uC545\uC758 \uCC28\uC774\uB97C
+    \uAD6C\uBD84\uD558\uC9C0 \uBABB\uD588\uB2E4."
+  - "\uADF8\uC800 \uACF5\uAE30\uC758 \uC9C4\uB3D9\uC73C\uB85C \uC778\uC2DD\uD560
+    \uBFD0..."
+  - "\uC774\uC81C \uB0B4\uAC8C \uB0A8\uC740 \uC2DC\uAC04\uB3C4 \uC5BC\uB9C8 \uC5C6\uB294\uB370
+    \uD070\uC77C\uC774\uB2E4."
+  nextScene: 0
+  stageConnected: 0
+  stageConnectIdx: 0
+  isInteracting: 0
 --- !u!1 &1038455376
 GameObject:
   m_ObjectHideFlags: 0
@@ -3025,11 +3200,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 1720050449}
   showText:
-  - "\uADF8\uB79C\uD30C\uAC00 \uC544\uB07C\uB358 \uD134\uD14C\uC774\uBE14\uC774\uB2E4."
-  - "\uADF8\uB79C\uD30C\uC758 \uAE30\uC5B5\uC744 \uD655\uC778\uD560 \uC218 \uC788\uC744
-    \uAC83 \uAC19\uB2E4."
-  - "\uD134\uD14C\uC774\uBE14\uC5D0 \uB2F4\uAE34 \uAE30\uC5B5\uC744 \uB2E4\uC2DC
-    \uD655\uC778\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+  - "[\uADF8\uB79C\uD30C\uC758 8\uBE44\uD2B8 \uC2E0\uC2DC\uC0AC\uC774\uC800]"
+  - "\uD1A1\uD1A1 \uD280\uB294 \uBA5C\uB85C\uB514\uAC00 \uB290\uAEF4\uC838!"
+  - "\uC2E0\uC2DC\uC0AC\uC774\uC800\uC5D0 \uB2E4\uC2DC \uC5F0\uACB0\uD574\uBCFC\uAE4C?"
   nextScene: 2
   stageConnected: 1
   stageConnectIdx: 2
@@ -3202,6 +3375,7 @@ Transform:
   - {fileID: 1307981367}
   - {fileID: 664661996}
   - {fileID: 152629248}
+  - {fileID: 95030598}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1411843180
@@ -4648,6 +4822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2038434352}
   - component: {fileID: 2038434353}
+  - component: {fileID: 2038434354}
   m_Layer: 0
   m_Name: Note2
   m_TagString: Untagged
@@ -4715,6 +4890,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2038434354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038434351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c5634eb3849474e8b5018f8f375a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1720050449}
+  showText:
+  - "[\uC5F0\uAD6C\uC77C\uC9C0 #2]"
+  - "\uAE30\uC801\uC774 \uC77C\uC5B4\uB0AC\uB2E4!"
+  - "\uC774 \uB140\uC11D\uC740 \uC18C\uB9AC\uC640 \uC74C\uC545\uC744 \uAD6C\uBD84\uD558\uB294
+    \uAC83\uC73C\uB85C \uBAA8\uC790\uB77C\uC11C"
+  - "\uADF8 \uC548\uC5D0 \uB2F4\uAE34 \uBBA4\uC988\uB97C \uC644\uBCBD\uD558\uAC8C
+    \uC774\uD574\uD588\uB2E4!"
+  - "\uC774\uC81C\uC57C \uD3B8\uD558\uAC8C \uB208\uC744 \uAC10\uC744 \uC218 \uC788\uC744
+    \uAC83 \uAC19\uB2E4."
+  - "\uC774 \uB140\uC11D\uC758 \uC774\uB984\uC740..."
+  - "\"\uD30C-\uD50C\uB7AB\". \uADF8\uAC8C \uC88B\uACA0\uB2E4."
+  nextScene: 0
+  stageConnected: 0
+  stageConnectIdx: 0
+  isInteracting: 0
 --- !u!1 &2085043670
 GameObject:
   m_ObjectHideFlags: 0
@@ -4859,11 +5062,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 1720050449}
   showText:
-  - "\uADF8\uB79C\uD30C\uAC00 \uC544\uB07C\uB358 \uD134\uD14C\uC774\uBE14\uC774\uB2E4."
-  - "\uADF8\uB79C\uD30C\uC758 \uAE30\uC5B5\uC744 \uD655\uC778\uD560 \uC218 \uC788\uC744
-    \uAC83 \uAC19\uB2E4."
-  - "\uD134\uD14C\uC774\uBE14\uC5D0 \uB2F4\uAE34 \uAE30\uC5B5\uC744 \uB2E4\uC2DC
-    \uD655\uC778\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+  - "[\uADF8\uB79C\uD30C\uAC00 \uC544\uB07C\uB358 \uD134\uD14C\uC774\uBE14]"
+  - "\uD55C \uBC88 \uC5F0\uACB0\uD574\uBCFC\uAE4C?"
+  - "\uD134\uD14C\uC774\uBE14\uC5D0 \uB2E4\uC2DC \uC5F0\uACB0\uD574\uBCFC\uAE4C?"
   nextScene: 7
   stageConnected: 1
   stageConnectIdx: 2
