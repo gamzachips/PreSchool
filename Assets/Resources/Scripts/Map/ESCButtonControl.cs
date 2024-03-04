@@ -21,7 +21,7 @@ public class ESCButtonControl : MonoBehaviour {
         }
 
         // 아래 방향키를 눌렀을 때
-        if (Input.GetKey(KeyCode.D) || Input.GetKeyDown(KeyCode.DownArrow)) {
+        if (Input.GetKey(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
             greenButton[count].SetActive(false);
             if(0 <= count && count < 1)
                 count++;

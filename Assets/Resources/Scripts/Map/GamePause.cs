@@ -9,15 +9,15 @@ public class GamePause : MonoBehaviour {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuCanvas;
     private ObjectInteract objectInteract;
+    public PlayerLife playerLife;
     bool Interacting = false;
 
     private void Start() {
-        objectInteract = GameObject.FindObjectOfType<ObjectInteract>();
+        playerLife = GameObject.FindObjectOfType<PlayerLife>();
         
     }
     void Update() {
-        Interacting = objectInteract.isInteracting;
-        if (!Interacting && Input.GetKeyDown(KeyCode.Escape)) {
+        if (!(playerLife.playerstate == PlayerLife.PlayerState.interactive) && Input.GetKeyDown(KeyCode.Escape)) {
             if (GameIsPaused) {
                 Resume();
             }

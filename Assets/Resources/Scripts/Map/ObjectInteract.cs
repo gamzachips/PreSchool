@@ -100,6 +100,7 @@ public class ObjectInteract : MonoBehaviour
             Debug.Log("Check ESC");
             panel.SetActive(false);
             isInteracting = false;
+            player.GetComponent<PlayerLife>().playerstate = PlayerLife.PlayerState.life;
         }
     }
 
