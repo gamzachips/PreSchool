@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -37,10 +37,12 @@ public class ItemScore: Item
                 scoreSystem.scoreItem1500++;
             }
 
+            AudioManager.Instance.PlayItemSound();
+
             //아이템 삭제
             Destroy(this.gameObject);
 
-            AudioManager.Instance.PlayItemSound();
+            
         }
     }
 
