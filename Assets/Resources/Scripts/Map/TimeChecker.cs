@@ -26,6 +26,7 @@ public class TimeChecker : MonoBehaviour
         {
             ScoreSystem.Instance.SaveRankAndScore(nowStage);
             SceneManager.LoadScene("ResultScene");
+            ScoreSystem.Instance.sceneType = GameObject.Find("TimeChecker").GetComponent<TimeChecker>().nowStage;
         }
     }
 }
