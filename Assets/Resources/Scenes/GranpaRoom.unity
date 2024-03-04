@@ -2167,7 +2167,6 @@ MonoBehaviour:
   gameObject:
   - {fileID: 1329033239}
   - {fileID: 723566045}
-  - {fileID: 189856155}
 --- !u!4 &723566047
 Transform:
   m_ObjectHideFlags: 0
@@ -2604,7 +2603,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c8dbbaa4acf30468413c7dfa39ea49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuCanvas: {fileID: 1133581769}
+  ESCManager:
+  - {fileID: 1133581769}
+  - {fileID: 189856155}
+  playerLife: {fileID: 0}
 --- !u!1 &1133581769
 GameObject:
   m_ObjectHideFlags: 0

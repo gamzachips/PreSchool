@@ -9,7 +9,6 @@ public class HelpButtonManager : MonoBehaviour {
         if (Input.anyKeyDown) {
             gameObject[0].SetActive(false);
             gameObject[1].SetActive(false);
-            gameObject[2].SetActive(true);
         }
     }
 }

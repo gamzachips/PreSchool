@@ -7,7 +7,7 @@ using UnityEngine;
 public class GamePause : MonoBehaviour {
     // 다른 스크립트에서 쉽게 접근이 가능하도록 static
     public static bool GameIsPaused = false;
-    public GameObject pauseMenuCanvas;
+    public GameObject[] ESCManager;
     private ObjectInteract objectInteract;
     public PlayerLife playerLife;
     bool Interacting = false;
@@ -28,13 +28,15 @@ public class GamePause : MonoBehaviour {
     }
 
     public void Resume() {
-        pauseMenuCanvas.SetActive(false);
+        ESCManager[0].SetActive(false);
+        ESCManager[1].SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
 
     public void Pause() {
-        pauseMenuCanvas.SetActive(true);
+        ESCManager[0].SetActive(true);
+        ESCManager[1].SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
