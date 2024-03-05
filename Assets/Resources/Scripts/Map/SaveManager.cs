@@ -49,9 +49,8 @@ public class SaveManager : MonoBehaviour
     public void SetRankAndScore(ScneManager.SceneType type, int rank, int score)
     {
 
-        
         bool prevPlayed = PlayerPrefs.GetInt("Played" + type.ToString()) == 1 ? true : false;
-        int prevScore = PlayerPrefs.GetInt("" + type.ToString());
+        int prevScore = PlayerPrefs.GetInt("Score" + type.ToString());
         //이전에 플레이하지 않았거나 점수가 더 높아졌으면
         if(!prevPlayed || prevScore < score)
         {
