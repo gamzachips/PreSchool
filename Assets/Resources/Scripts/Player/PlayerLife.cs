@@ -33,7 +33,8 @@ public class PlayerLife : MonoBehaviour
         defence,
         die,
         interactive,
-        afterDefence
+        afterDefence,
+        pause
     };
 
     public PlayerState playerstate = PlayerState.life;

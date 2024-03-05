@@ -46,10 +46,12 @@ public class ObjectInteract : MonoBehaviour
     private void Update()
     {
         
+        
         Debug.Log("isStaying : " + isStaying);
         Debug.Log("isInteracting : " + isInteracting);
         if (isStaying)
         {
+            if (player.GetComponent<PlayerLife>().playerstate == PlayerLife.PlayerState.pause) return;
             if (Input.GetKeyDown(KeyCode.Z) || (Input.GetKeyDown(KeyCode.Return)))
             {
                 isInteracting = true;
@@ -106,6 +108,7 @@ public class ObjectInteract : MonoBehaviour
             panel.SetActive(false);
             isInteracting = false;
             player.GetComponent<PlayerLife>().playerstate = PlayerLife.PlayerState.life;
+            nowIdx = 0;
         }
     }
 

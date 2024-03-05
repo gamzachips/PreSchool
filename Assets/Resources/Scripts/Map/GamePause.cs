@@ -31,6 +31,7 @@ public class GamePause : MonoBehaviour {
         ESCManager[1].SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        playerLife.playerstate = PlayerLife.PlayerState.life;
     }
 
     public void Pause() {
@@ -38,5 +39,6 @@ public class GamePause : MonoBehaviour {
         ESCManager[1].SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        playerLife.playerstate = PlayerLife.PlayerState.pause;
     }
 }
