@@ -53,7 +53,7 @@ public class AudioManager : MonoBehaviour
 
     private void LoadAudios()
     {
-        mainMusicClip = Resources.Load<AudioClip>("Audios/MainMusic");
+        mainMusicClip = Resources.Load<AudioClip>("Audios/Thropy");
         gameMusicClip = Resources.Load<AudioClip>("Audios/Game2");
         itemSoundClip = Resources.Load<AudioClip>("Audios/ItemPickUp");
         buttonSoundClip = Resources.Load<AudioClip>("Audios/ButtonClick");
@@ -86,6 +86,11 @@ public class AudioManager : MonoBehaviour
     public void MuteMusic()
     {
         musicSource.mute = true;
+    }
+
+    public bool isMusicMute()
+    {
+        return musicSource.mute;
     }
 
     public void PlayButtonSound()

@@ -63,12 +63,14 @@ public class ScneManager : MonoBehaviour
     public void ChangeResult()
     {
         SceneManager.LoadScene("ResultScene");
+        AudioManager.Instance.MuteMusic();
     }
 
     public void ChangeRoom()
     {
         SceneManager.LoadScene("GranpaRoom");
-        AudioManager.Instance.MuteMusic();
+        if (AudioManager.Instance.isMusicMute())
+            AudioManager.Instance.PlayMainMusic();
     }
 
     public void ChangeTutorial()
