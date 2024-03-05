@@ -107,9 +107,16 @@ public class ObjectInteract : MonoBehaviour
             Debug.Log("Check ESC");
             panel.SetActive(false);
             isInteracting = false;
-            player.GetComponent<PlayerLife>().playerstate = PlayerLife.PlayerState.life;
+            StartCoroutine(ResumeplayerState());
             nowIdx = 0;
         }
+    }
+
+    IEnumerator ResumeplayerState()
+    {
+        yield return new WaitForSeconds(0.5f);
+        player.GetComponent<PlayerLife>().playerstate = PlayerLife.PlayerState.life;
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
