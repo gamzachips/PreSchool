@@ -30,27 +30,27 @@ public class SaveManager : MonoBehaviour
         Init();
     }
 
-    public bool GetRankAndScore(ScneManager.SceneType type, out char rank, out int score)
+    public bool GetRankAndScore(ScneManager.SceneType type, out int rank, out int score)
     {
         if (PlayerPrefs.GetInt("Played" + type.ToString()) == 1)
         {
-            rank = (char)PlayerPrefs.GetInt("Rank" + type.ToString());
+            rank = PlayerPrefs.GetInt("Rank" + type.ToString());
             score = PlayerPrefs.GetInt("Score" + type.ToString());
             return true;
         }
         else
         {
-            rank = ' ';
+            rank = 0;
             score = 0;
             return false;
         }
     }
 
-    public void SetRankAndScore(ScneManager.SceneType type, char rank, int score)
+    public void SetRankAndScore(ScneManager.SceneType type, int rank, int score)
     {
 
         PlayerPrefs.SetInt("Played" + type.ToString(), 1);
-        PlayerPrefs.SetInt("Rank" + type.ToString(), (int)rank);
+        PlayerPrefs.SetInt("Rank" + type.ToString(), rank);
         PlayerPrefs.SetInt("Score" + type.ToString(), score);
     }
 

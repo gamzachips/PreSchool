@@ -59,11 +59,11 @@ public class ObjectInteract : MonoBehaviour
                 if(stageConnectIdx != -1)
                     finalIdx = stageConnectIdx - 1;
 
-                char rank;
+                int rank;
                 int score;
                 //기존에 상호작용중이 아니고 스테이지를 플레이했었다면
                 if(SaveManager.Instance.GetRankAndScore(nextScene, out rank, out score)
-                    && rank.ToString()[0] <= clearGradeType.ToString()[0]
+                    && rank <= (int)clearGradeType
                     && player.GetComponent<PlayerLife>().playerstate != PlayerLife.PlayerState.interactive)
                 {
                     //바로 스테이지 텍스트
@@ -81,7 +81,7 @@ public class ObjectInteract : MonoBehaviour
                     if(stageConnectIdx != -1 && nowIdx == stageConnectIdx)
                         textMesh.SetText(textMesh.text + '\n' 
                         + "[내 최고 기록] "
-                        + rank + "랭크 "
+                        + ((GradeType)rank).ToString() + "랭크 "
                         + score.ToString() + "점");
 
                     nowIdx++;

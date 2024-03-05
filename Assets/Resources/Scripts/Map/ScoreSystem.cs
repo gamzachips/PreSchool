@@ -100,6 +100,6 @@ public class ScoreSystem : MonoBehaviour
 
     public void SaveRankAndScore(ScneManager.SceneType type)
     {
-        SaveManager.Instance.SetRankAndScore(type, grade.ToString()[0], score);
+        SaveManager.Instance.SetRankAndScore(type, (int)grade, score);
     }
 }

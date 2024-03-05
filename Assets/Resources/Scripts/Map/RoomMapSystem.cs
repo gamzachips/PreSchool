@@ -12,11 +12,11 @@ public class RoomMapSystem : MonoBehaviour
 
     private void Start()
     {
-        char rank;
+        int rank;
         int score;
         if(SaveManager.Instance.GetRankAndScore(ScneManager.SceneType.Tutorial, out rank, out score))
         {
-            if (rank != 'F')
+            if (rank != (int)GradeType.F)
             {
                 computerMusicAnimation.SetActive(true);
                 computerCollider.SetActive(true);
