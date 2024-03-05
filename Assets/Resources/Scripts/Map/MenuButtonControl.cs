@@ -7,7 +7,7 @@ public class MenuButtonControl : MonoBehaviour {
 
     void Update() {
         // 위 방향키나 w를 눌렀을 때
-        if (Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
             greenButton[count].SetActive(false);
             if(count != 0)
                 count--;
@@ -15,7 +15,7 @@ public class MenuButtonControl : MonoBehaviour {
         }
 
         // 아래 방향키나 d를 눌렀을 때
-        if (Input.GetKey(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
             greenButton[count].SetActive(false);
             if(0 <= count && count < 2)
                 count++;

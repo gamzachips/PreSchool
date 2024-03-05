@@ -12,6 +12,7 @@ public class ObjectInteract : MonoBehaviour
     GameObject panel;
 
     //보여줄 텍스트 목록
+    [TextArea]
     [SerializeField]
     string[] showText;
 
