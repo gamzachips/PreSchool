@@ -53,15 +53,15 @@ public class ObjectInteract : MonoBehaviour
             {
                 isInteracting = true;
                 int finalIdx = showText.Length - 1;
-                if (stageConnected) finalIdx = stageConnectIdx - 1;
+                if(stageConnectIdx != -1)
+                    finalIdx = stageConnectIdx - 1;
 
                 char rank;
                 int score;
                 //기존에 상호작용중이 아니고 스테이지를 플레이했었다면
                 if(SaveManager.Instance.GetRankAndScore(nextScene, out rank, out score)
                     && rank.ToString()[0] <= clearGradeType.ToString()[0]
-                    && player.GetComponent<PlayerLife>().playerstate != PlayerLife.PlayerState.interactive
-                     && rank != 'F')
+                    && player.GetComponent<PlayerLife>().playerstate != PlayerLife.PlayerState.interactive)
                 {
                     //바로 스테이지 텍스트
                     nowIdx = stageConnectIdx;
@@ -75,7 +75,7 @@ public class ObjectInteract : MonoBehaviour
                     panel.SetActive(true);
                     textMesh.SetText(showText[nowIdx]);
 
-                    if(nowIdx == stageConnectIdx)
+                    if(stageConnectIdx != -1 && nowIdx == stageConnectIdx)
                         textMesh.SetText(textMesh.text + '\n' 
                         + "[내 최고 기록] "
                         + rank + "랭크 "
@@ -91,7 +91,7 @@ public class ObjectInteract : MonoBehaviour
                     nowIdx = 0;
 
                     //전환할 씬이 있다면 전환
-                    if(nextScene != ScneManager.SceneType.None)
+                    if(stageConnected && nextScene != ScneManager.SceneType.None)
                     {
                         ScneManager.Instance.ChangeSceneByType(nextScene);
                     }
