@@ -76,6 +76,7 @@ public class ScneManager : MonoBehaviour
     public void ChangeTutorial()
     {
         ScoreSystem.Instance.Reset();
+        AudioManager.Instance.MuteMusic();
         SceneManager.LoadScene("Tutorial");
     }
 
