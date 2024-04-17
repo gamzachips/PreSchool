@@ -93,6 +93,7 @@ public class TutorialSystem : MonoBehaviour
                 {
                     laser.SetActive(true);
                 }
+                nowIdx++;
             }
 
 
